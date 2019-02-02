@@ -5,6 +5,8 @@ import home from '@/components/home'
 import blog from '@/components/blog'
 import services from '@/components/services'
 import contact from '@/components/contact'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(Router)
 
