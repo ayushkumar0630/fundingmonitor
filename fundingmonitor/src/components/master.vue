@@ -1,6 +1,16 @@
 <template>
   <div class="hello">
     <h1>Index Page</h1>
+    <b-alert show>Default Alert</b-alert>
+
+    <b-alert variant="success" show>Success Alert</b-alert>
+
+    <b-alert variant="danger"
+             dismissible
+             :show="showDismissibleAlert"
+             @dismissed="showDismissibleAlert=false">
+      Dismissible Alert!
+    </b-alert>
   </div>
 </template>
 
