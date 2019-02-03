@@ -11,6 +11,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
