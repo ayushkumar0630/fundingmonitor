@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import master from '@/components/master'
 import home from '@/components/home'
 import blog from '@/components/blog'
-import services from '@/components/services'
+import services from '@/components/tour'
 import contact from '@/components/contact'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -29,8 +29,8 @@ export default new Router({
       component: blog
     },
     {
-      path: '/services',
-      name: 'services',
+      path: '/tour',
+      name: 'tour',
       component: services
     },
     {

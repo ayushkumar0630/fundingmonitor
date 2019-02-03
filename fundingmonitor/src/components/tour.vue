@@ -1,14 +1,14 @@
 <template>
- <div class="services">
+ <div class="tour">
   <h1>{{title}}</h1>
  </div>
 </template>
 <script>
 export default {
-  name: 'services',
+  name: 'tour',
   data () {
     return {
-      title: 'Services'
+      title: 'Welcome to our tour'
     }
   }
 }
