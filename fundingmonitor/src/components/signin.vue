@@ -1,14 +1,14 @@
 <template>
- <div class="contact">
+ <div class="signin">
   <h1>{{title}}</h1>
  </div>
 </template>
 <script>
 export default {
-  name: 'contact',
+  name: 'signin',
   data () {
     return {
-      title: 'My number is 911'
+      title: 'Send me your FB credentials'
     }
   }
 }

@@ -1,14 +1,14 @@
 <template>
- <div class="contact">
+ <div class="privacy">
   <h1>{{title}}</h1>
  </div>
 </template>
 <script>
 export default {
-  name: 'contact',
+  name: 'privacy',
   data () {
     return {
-      title: 'My number is 911'
+      title: 'We won\'t leak your data*'
     }
   }
 }
