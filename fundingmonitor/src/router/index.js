@@ -3,8 +3,13 @@ import Router from 'vue-router'
 import master from '@/components/master'
 import home from '@/components/home'
 import blog from '@/components/blog'
-import services from '@/components/tour'
+import pricing from '@/components/pricing'
+import features from '@/components/features'
+import faq from '@/components/faq'
 import contact from '@/components/contact'
+import signin from '@/components/signin'
+import team from '@/components/team'
+import privacy from '@/components/privacy'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
@@ -29,14 +34,39 @@ export default new Router({
       component: blog
     },
     {
-      path: '/tour',
-      name: 'tour',
-      component: services
+      path: '/pricing',
+      name: 'pricing',
+      component: pricing
+    },
+    {
+      path: '/features',
+      name: 'features',
+      component: features
+    },
+    {
+      path: '/faq',
+      name: 'faq',
+      component: faq
     },
     {
       path: '/contact',
       name: 'contact',
       component: contact
+    },
+    {
+      path: '/signin',
+      name: 'signin',
+      component: signin
+    },
+    {
+      path: '/team',
+      name: 'team',
+      component: team
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: privacy
     }
   ]
 })
