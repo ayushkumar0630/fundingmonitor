@@ -1,18 +1,21 @@
 <template>
     <div id="Footer">
-        <footer class="container py-5">
+        <footer class="py-5" id="globalfooter">
             <div class="row">
-                <div class="col-md">
-                <h4>FundingMonitor</h4>
-                <small class="d-block mb-3 text-muted">©2019</small>
+                <div class="col-sm">
+                    <router-link class="text-muted" to="/contact">Contact</router-link>
                 </div>
-                <div>
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                    <li><router-link class="text-muted" to="/contact">Contact</router-link></li>
-                    <li><router-link class="text-muted" to="/team">Team</router-link></li>
-                    <li><router-link class="text-muted" to="/privacy">Privacy</router-link></li>
-                </ul>
+                <div class="col-sm">
+                    <router-link class="text-muted" to="/team">Team</router-link>
+                </div>
+                <div class="col-sm">
+                    <router-link class="text-muted" to="/"><img src="@/assets/fundingmonitor.png" class="img-responsive-footer" alt=""/></router-link>
+                </div>
+                <div class="col-sm">
+                    <router-link class="text-muted" to="/privacy">Privacy</router-link>
+                </div>
+                <div class="col-sm">
+                    <router-link class="text-muted" to="/signin">Sign In</router-link>
                 </div>
             </div>
         </footer>
@@ -31,5 +34,17 @@ export default {
 </script>
 
 <style>
-
+#globalfooter{
+  background-color: white;
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+  height: 25px;
+}
+.img-responsive-footer{
+    height: auto;
+    width: auto;
+    max-height: 50px;
+    max-width: 50px;
+}
 </style>
