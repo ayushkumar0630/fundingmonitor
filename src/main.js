@@ -4,14 +4,20 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import BootstrapVue from 'bootstrap-vue'
+const fb = require('./firebaseconf.js')
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+/* eslint-disable */
+let app
+fb.auth.onAuthStateChanged(user => {
+    if (!app) {
+      new Vue({
+        el: '#app',
+        router,
+        components: { App },
+        template: '<App/>'
+      })
+    }
 })
