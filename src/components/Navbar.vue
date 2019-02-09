@@ -1,5 +1,5 @@
 <template>
-    <div id="navbar">
+    <div id="Navbar">
         <nav class="site-header sticky-top py-1" id="globalnav">
             <div class="container d-flex flex-column flex-md-row justify-content-between">
                 <a class="py-2" href="/">
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'navbar',
+  name: 'Navbar',
   data () {
     return {
 
