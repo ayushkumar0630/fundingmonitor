@@ -13,8 +13,8 @@
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit" @click="login">Sign in</button>
-      <button class="btn btn-lg btn-secondary btn-block" type="submit"><router-link to="/signup">Sign up</router-link></button>
-    </form>
+      <span>or <router-link to="/signin">Sign Up</router-link></span>
+      </form>
  </div>
 </template>
 <script>
