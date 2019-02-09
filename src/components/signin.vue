@@ -12,7 +12,8 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" @click="login">Sign in</button>
+      <button class="btn btn-lg btn-secondary btn-block" type="submit"><router-link to="/signup">Sign up</router-link></button>
     </form>
  </div>
 </template>
