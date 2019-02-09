@@ -10,6 +10,7 @@ import contact from '@/components/contact'
 import signin from '@/components/signin'
 import team from '@/components/team'
 import privacy from '@/components/privacy'
+import signup from '@/components/signup'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
@@ -67,6 +68,11 @@ export default new Router({
       path: '/privacy',
       name: 'privacy',
       component: privacy
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: signup
     }
   ]
 })
