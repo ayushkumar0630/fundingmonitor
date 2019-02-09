@@ -9,9 +9,9 @@
                 <div>
                 <h5>About</h5>
                 <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="/contact">Contact</a></li>
-                    <li><a class="text-muted" href="/team">Team</a></li>
-                    <li><a class="text-muted" href="/privacy">Privacy</a></li>
+                    <li><router-link class="text-muted" to="/contact">Contact</router-link></li>
+                    <li><router-link class="text-muted" to="/team">Team</router-link></li>
+                    <li><router-link class="text-muted" to="/privacy">Privacy</router-link></li>
                 </ul>
                 </div>
             </div>
