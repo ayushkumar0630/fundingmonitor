@@ -33,7 +33,10 @@ export default {
     }
   }, 
   created: function(){
-      users: db.collection('Users')
+    //   return {
+    //       users: db.collection('Users')
+    //   }
+    console.log(db.collection('Users'))
   }
 }
 </script>
