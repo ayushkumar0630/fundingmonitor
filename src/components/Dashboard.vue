@@ -4,6 +4,7 @@
 </template>
 
 <script>
+//  import db from '@/firebaseconf.js'
 export default {
   name: 'dashboard',
   data () {
