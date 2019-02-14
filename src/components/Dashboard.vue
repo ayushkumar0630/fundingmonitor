@@ -2,10 +2,12 @@
     <div class="dashboard">
         <table class="striped">
             <thead>
-                <tr>Company</tr>
-                <tr>First Name</tr>
-                <tr>Last Name</tr>
-                <tr>Title</tr>
+                <tr>
+                    <th>Company</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Title</th>
+                </tr>
             </thead>
             <tbody v-for="(user, index) in users" :key="index">
                 <tr>
