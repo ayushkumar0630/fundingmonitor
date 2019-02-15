@@ -36,7 +36,19 @@ export default {
     //   return {
     //       users: db.collection('Users')
     //   }
-    console.log(db.collection('Users'))
+    db.collection('Users').get()
+    .then(snapshot => {
+        snapshot.forEach(doc => {
+            //  console.log(doc.id, " => ", doc.data())
+            let user = doc.data()
+            user.id = doc.id
+            this.users.push(user)
+            //  console.log(user)
+        });
+    })
+    .catch(error =>{
+        console.log("Error getting documents: ", error);
+    })
   }
 }
 </script>
