@@ -2,7 +2,7 @@
     <div class="navbar">
         <nav>
             <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" class="brand-logo">Logo <img src="../assets/fundingmonitor.png" alt=""></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><router-link :to="{ name: 'signin'}">Sign In</router-link></li>
             </ul>
@@ -20,6 +20,8 @@ export default {
   }
 }
 </script>
-
-<style>
+<style lang="scss" scoped>
+.nav-wrapper{
+  background-color: #013e4e;
+}
 </style>
