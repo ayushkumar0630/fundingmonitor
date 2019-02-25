@@ -6,9 +6,9 @@
           <img src="../assets/fundingmonitor.svg" alt width="40px">
           <span>Funding Monitor</span>
         </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile" class="right hide-on-med-and-down sub-nav">
           <li>
-            <router-link :to="{ name: 'signin'}">Sign In</router-link>
+            <router-link :to="{ name: 'signin'}" class="link"><span class="icon user"></span><span class="label">Sign In</span></router-link>
           </li>
         </ul>
       </div>
@@ -29,7 +29,7 @@ nav{
   box-shadow: none;
 }
 .nav-wrapper {
-  background-color: #ffba5a;
+  background-color: #fce4c4;
 
   .brand-logo {
     img {
@@ -41,8 +41,34 @@ nav{
       font-size: 18px;
       display: block;
       float: left;
-      color: #ffffff;
+      
+    font-weight: 500;
+    color: #c98122 ;
     }
   }
+
+  
 }
+.sub-nav{
+    li{
+     a{
+       span{
+         display: inline-block;
+      color: #c98122  !important;    
+    vertical-align: middle;     
+       }
+
+      .icon{
+        margin-right:10px;
+        width:30px;
+        height:30px;
+
+        &.user{
+          background-image: url("../assets/icon-user.svg");
+          background-repeat: no-repeat;
+        }
+      }
+     } 
+    }
+  }
 </style>

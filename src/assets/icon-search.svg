@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="6.744mm"
+   height="6.7090001mm"
+   viewBox="0 0 6.744 6.7090001"
+   version="1.1"
+   id="svg4737"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="icon-search.svg">
+  <defs
+     id="defs4731" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-70"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4734">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-290.291)">
+    <g
+       id="g4600"
+       transform="matrix(0.01049826,-0.01049826,0.01049826,0.01049826,-12.8971,309.36078)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         inkscape:connector-curvature="0"
+         id="circle4593"
+         d="m 1522.4739,-220.10547 a 178.37328,178.37328 0 0 0 -178.373,178.373048 178.37328,178.37328 0 0 0 178.373,178.373042 178.37328,178.37328 0 0 0 178.3731,-178.373042 178.37328,178.37328 0 0 0 -178.3731,-178.373048 z m 0,34.71094 A 143.66142,143.66142 0 0 1 1666.1361,-41.732422 143.66142,143.66142 0 0 1 1522.4739,101.92773 143.66142,143.66142 0 0 1 1378.8138,-41.732422 143.66142,143.66142 0 0 1 1522.4739,-185.39453 Z"
+         style="fill:#999999;fill-opacity:1;stroke:none;stroke-width:6.29379129;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers" />
+      <rect
+         ry="30.681244"
+         y="114.62405"
+         x="1493.4814"
+         height="219.3709"
+         width="61.362488"
+         id="rect4596"
+         style="fill:#999999;fill-opacity:1;stroke:none;stroke-width:5.9000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers" />
+    </g>
+  </g>
+</svg>

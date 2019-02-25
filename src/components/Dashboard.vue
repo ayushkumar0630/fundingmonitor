@@ -4,11 +4,32 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
-            <div class="title">Opportunities</div>
+            <div class="title"><span>Opportunities</span><span class="icon-title"></span></div>
           </div>
           <div class="col-md-6">
             <div class="functions clearfix">
               <input type="button" class="btn-add float-right" value="Add Opportunity">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sub-header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="grid-options">
+              <span class="option-1"></span>
+              <span class="option-2"></span>
+              <span class="option-search">
+                <input type="text" name="Search field values" id="" class="txt-search">
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="content float-right">
+              <div class="row-count">28 Opportunities</div>
+              <div class="filter"><span class="filter-icon"></span><span class="filter-label">Filters</span></div>
             </div>
           </div>
         </div>
@@ -90,21 +111,57 @@ export default {
 
     .title {
       font-size: 20px;
-      font-weight: 500;
-      color: #5b8f9d;
+      color: #fead41;
       line-height: 40px;
+
+      span{
+        display:inline-block;
+    vertical-align: middle;     
+      }
+    }
+
+    .icon-title{
+      width: 24px;
+      height: 24px;
+      background-image: url('../assets/icon-title.svg');
+      background-repeat: no-repeat;
+      margin-left:10px;
     }
 
     .btn-add {
-      background-color: #3bc1ad;
+      background-color: #fead41;
       padding: 10px 20px;
       border-radius: 4px;
       font-weight: normal;
       border: 1px solid #333;
       border: none;
-      border-bottom: 3px solid #2eaa98;
+      border-bottom: 3px solid #da8413;
       color: #ffffff;
       outline: none;
+    }
+  }
+
+  .sub-header{
+    .row{
+      margin-bottom:0px;
+    }
+    .row-count{
+      font-size: 14px;
+      color:#8f8f8f;
+      display:inline-block;
+    }
+
+    .filter{
+      display:inline-block;
+    }
+
+
+    .txt-search{
+      width: 200px;
+      background-image: url('../assets/icon-search.svg');
+      background-repeat: no-repeat;    background-position: right 10px top 2px;
+    height: 34px;
+    padding-right: 40px;
     }
   }
 }
