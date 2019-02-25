@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="5.2540002mm"
+   height="4.3140001mm"
+   viewBox="0 0 5.2540002 4.3140001"
+   version="1.1"
+   id="svg6067"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="icon-filter.svg">
+  <defs
+     id="defs6061" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="-350.69437"
+     inkscape:cy="772.96024"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata6064">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-292.686)">
+    <g
+       id="g6032"
+       transform="matrix(0.01026196,0,0,0.01026196,-6.679752e-5,292.21594)">
+      <g
+         id="g5975">
+        <g
+           id="g5973">
+          <path
+             id="path5971"
+             d="M 480.159,45.81 H 31.841 C 14.284,45.81 0,60.093 0,77.65 v 37.472 c 0,17.557 14.284,31.841 31.841,31.841 H 46.748 L 211.305,311.52 v 144.056 c 0,4.293 2.586,8.163 6.552,9.806 1.313,0.543 2.692,0.808 4.059,0.808 2.763,0 5.478,-1.078 7.508,-3.109 l 68.559,-68.56 c 1.99,-1.991 3.109,-4.69 3.109,-7.505 V 311.518 L 465.646,146.963 h 14.514 c 17.557,0 31.841,-14.284 31.841,-31.841 V 77.65 C 512,60.093 497.716,45.81 480.159,45.81 Z M 282.968,299.621 c -2.096,2.096 -3.128,4.85 -3.104,7.597 v 75.404 l -47.332,47.332 V 307.156 c 0.007,-2.727 -1.027,-5.455 -3.107,-7.536 L 76.768,146.963 H 435.625 Z M 490.773,115.122 c 0,5.852 -4.761,10.614 -10.614,10.614 H 31.841 c -5.852,0 -10.614,-4.761 -10.614,-10.614 V 77.65 c 0,-5.852 4.761,-10.614 10.614,-10.614 H 480.16 c 5.852,0 10.614,4.761 10.614,10.614 v 37.472 z"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+      <g
+         id="g5977" />
+      <g
+         id="g5979" />
+      <g
+         id="g5981" />
+      <g
+         id="g5983" />
+      <g
+         id="g5985" />
+      <g
+         id="g5987" />
+      <g
+         id="g5989" />
+      <g
+         id="g5991" />
+      <g
+         id="g5993" />
+      <g
+         id="g5995" />
+      <g
+         id="g5997" />
+      <g
+         id="g5999" />
+      <g
+         id="g6001" />
+      <g
+         id="g6003" />
+      <g
+         id="g6005" />
+    </g>
+  </g>
+</svg>

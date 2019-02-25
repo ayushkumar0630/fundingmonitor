@@ -29,7 +29,9 @@ nav{
   box-shadow: none;
 }
 .nav-wrapper {
-  background-color: #fce4c4;
+  // background-color: #fce4c4;
+      background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
 
   .brand-logo {
     img {

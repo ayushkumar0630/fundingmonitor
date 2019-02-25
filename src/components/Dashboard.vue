@@ -149,10 +149,27 @@ export default {
       font-size: 14px;
       color:#8f8f8f;
       display:inline-block;
+    margin-top: 8px;
     }
 
     .filter{
+      
       display:inline-block;
+    margin-top: 8px;
+      margin-left: 4px;
+      span{
+      display:inline-block;
+      vertical-align: middle;
+
+      &.filter-icon{
+        width: 20px;
+        height:20px;
+        margin-right: 4px;
+        background-image: url('../assets/icon-filter.svg');
+        background-repeat: no-repeat;
+      }
+      }
+
     }
 
 
