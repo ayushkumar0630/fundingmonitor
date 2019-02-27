@@ -1,10 +1,28 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-123">
+      <div class="col-md-12">
         <div class="signin-wrapper">
-          <div class="signin">
-            <div class="about"></div>
+          <div class="signin clearfix">
+            <div class="about">
+               <vue-particles 
+               color="#ff9400"
+              :particleOpacity="1"
+              :particlesNumber="250"
+              shapeType="circle"
+              :particleSize="4"
+              linesColor="#ff9400"
+              :linesWidth="1"
+              :lineLinked="true"
+              :lineOpacity="1"
+              :linesDistance="100"
+              :moveSpeed="1"
+              :hoverEffect="false"
+              hoverMode="grab"
+              :clickEffect="false"
+              clickMode="push"
+               ></vue-particles>
+            </div>
             <div class="signin-container">
               <div class="login-title">
                 <div class="logo-container clearfix">
@@ -44,6 +62,9 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles)
 export default {
   name: "signin",
   data() {
@@ -53,43 +74,78 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../scss/common.scss";
 .signin-wrapper {
   .signin {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-    border: 1px solid #ffffff;
+    // border: 1px solid #ffffff;
     border-radius: 6px;
-    margin: 10% auto;
+    margin: 8% auto;
+    margin-bottom:0px;
+    @media only screen and (min-width: $break-x-large) {
+   
     width: 60%;
-    height: 460px;
-    height: 460px;
+  }
     .about {
       position: relative;
       width: 40%;
-      height: 100%;
+      height: 460px;
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
       background-color: #ffba5a;
       background-position: -306px center;
       background-size: cover;
       float: left;
+
+
+  @media only screen and (max-width: $break-x-large) {
+   display:none;
+  }
+      .particles-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+}
     }
 
     .signin-container {
       width: 60%;
       float: left;
-      padding: 40px 60px;
-
+      padding: 40px 80px;
+      @media only screen and (max-width: $break-x-large) {
+padding: 40px;
+    width: 100%;
+      }
+       @media only screen and (max-width: $break-xx-large) {         
+padding: 40px;
+       }
 
 .login-title{
+     width: fit-content;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 26px;
   .logo-container{
     width: 100%;
-    .logo{
-      display: block;
-      float: left;
+    .logo{    
+      display: inline-block;
+    vertical-align: middle;
+    margin-top: 6px;
+    margin-right: 8px;
+
     }
     .name{
-      display:block;
-      float: left;
+         display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 600;
+    color: #6e6e6e;
     }
   }
 }
@@ -97,12 +153,7 @@ export default {
 
     .btn-signin{
       border: none;
-    background: #ee7a23;
-    background: -moz-linear-gradient(left, #ee7a23 0%, #f95300 100%);
-    background: -webkit-linear-gradient(left, #ee7a23 0%, #f95300 100%);
-    background: linear-gradient(to right, #ee7a23 0%, #f95300 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee7a23', endColorstr='#f95300', GradientType=1);
-    border-color: #ee7a23;
+      border-color: #ee7a23;
     color: #fff;
     width: 100%;
     font-weight: 500;
@@ -112,10 +163,11 @@ export default {
     outline: none;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-      padding: 10px 38px;
-    margin-top: 10px;
+      padding: 12px 38px;
+    margin-top: 20px;
     margin-bottom: 10px;
-        background: #f5610c !important;
+        background: #ff9400  !important;
+        cursor: pointer;
 
         &:hover{
           box-shadow: 0px 0px 8px #f0751f;
@@ -123,9 +175,10 @@ export default {
     }
 
     .link-forgot{
-      float:right;
-      color:#333;
-      font-size: 12px;
+      color: #8b8b8b;
+    font-size: 14px;
+    margin-top: 10px;
+    float: right;
 
       &:hover{
         color:#333;
@@ -137,7 +190,13 @@ export default {
 }
 
 .form-group {
+  display: block;
   .input-container {
+    margin-bottom: 10px;
+    .input-label{
+          margin-bottom: 10px;
+    color: #607080;
+    }
     .input-text {
       .text {
         border: 1px solid #a6b4c2;
@@ -147,8 +206,8 @@ export default {
         line-height: 24px;
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
-        padding: 4px;
-    height: 32px;
+        padding: 10px;    height: 42px;
+    box-sizing: border-box;
 
     &:focus{
           outline: none;

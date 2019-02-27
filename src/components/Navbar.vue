@@ -45,7 +45,7 @@ nav{
       float: left;
       
     font-weight: 500;
-    color: #c98122 ;
+    color: #6e6e6e ;
     }
   }
 
@@ -56,7 +56,7 @@ nav{
      a{
        span{
          display: inline-block;
-      color: #c98122  !important;    
+      color: #6e6e6e  !important;    
     vertical-align: middle;     
        }
 

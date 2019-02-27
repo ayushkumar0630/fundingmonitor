@@ -1,2 +1,10 @@
 
 @import './node_modules/bootstrap/scss/bootstrap.scss';
+
+/* media query breakdown */
+$break-x-small: 320px;
+$break-small: 576px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-x-large: 1024px;
+$break-xx-large: 1200px;
