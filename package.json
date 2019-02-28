@@ -12,10 +12,11 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.13",
     "firebase": "^5.8.2",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "vue": "^2.5.2",
+    "vue": "^2.6.7",
     "vue-router": "^3.0.1",
     "vuefire": "^2.0.0-alpha.20"
   },

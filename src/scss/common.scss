@@ -1,6 +1,7 @@
 
 @import './node_modules/bootstrap/scss/bootstrap.scss';
-
+@import './node_modules/bootstrap/scss/bootstrap';
+@import './node_modules/bootstrap-vue/src/index.scss';
 /* media query breakdown */
 $break-x-small: 320px;
 $break-small: 576px;
