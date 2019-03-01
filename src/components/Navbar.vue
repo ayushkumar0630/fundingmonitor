@@ -15,6 +15,9 @@
     </nav> -->
   <!-- </div> -->
     <div>
+      <section class="section-nav">
+      <div class="container">
+        <div class="row">
      <b-navbar toggleable="lg" type="light" variant="info" class="nav-wrapper">
     <b-navbar-brand href="#">
        <a href="#" class="brand-logo">
@@ -27,34 +30,23 @@
 
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav>
-        <b-nav-item href="#">Link</b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
+        <b-nav-item href="#">DOCS</b-nav-item>
+        <b-nav-item href="#" >PRICING</b-nav-item>
+        <b-nav-item href="#" >FEATURES</b-nav-item>
+        <b-nav-item href="#" >FAQ</b-nav-item>
+        <b-nav-item href="#" >BLOG</b-nav-item>
+        <b-nav-item href="#" >FREE TOOLS</b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-form>
-          <b-form-input size="sm" class="mr-sm-2" type="text" placeholder="Search" />
-          <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-        </b-nav-form>
 
-        <b-nav-item-dropdown text="Lang" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-
-        <b-nav-item-dropdown right>
-          <!-- Using button-content slot -->
-          <template slot="button-content"><em>User</em></template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
-          <b-dropdown-item href="#">Signout</b-dropdown-item>
-        </b-nav-item-dropdown>
+       
+         <b-nav-item href="#" ><div class="user"><span class="icon user"></span><span class="label">SIGN IN</span></div></b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
-</div>
+</div></div></section></div>
 </template>
 
 <script>
@@ -71,14 +63,20 @@ export default {
 <style lang="scss" scoped>
 @import './node_modules/bootstrap/scss/bootstrap';
 @import './node_modules/bootstrap-vue/src/index.scss';
+@import '../scss/common.scss';
 nav{
   box-shadow: none;
+}
+
+.section-nav{  
+      background-color: #ffffff !important;
+    border-bottom: 1px solid #eaeaea;    
 }
 
 .bg-info{
   
       background-color: #ffffff !important;
-    border-bottom: 1px solid #eaeaea;
+   width: 100%;
 }
 .nav-wrapper {
 
@@ -86,12 +84,13 @@ nav{
     img {
       display: block;
       float: left;
-      margin: 10px 12px;
+      margin: 0 12px 0 0;
     }
     span {
       font-size: 18px;
       display: block;
       float: left;
+    margin-top: 8px;
       
     font-weight: 500;
     color: #6e6e6e ;
@@ -104,22 +103,38 @@ nav{
     li{
      a{
        span{
-         display: inline-block;
-      color: #6e6e6e  !important;    
-    vertical-align: middle;     
+           
        }
 
-      .icon{
+     
+     } 
+    }
+  }
+
+  .user{
+   .icon{
         margin-right:10px;
         width:30px;
         height:30px;
-
+ display: inline-block;
+      color: #6e6e6e  !important;    
+    vertical-align: middle;  
         &.user{
           background-image: url("../assets/icon-user.svg");
           background-repeat: no-repeat;
         }
       }
-     } 
-    }
-  }
+      .label{
+            margin-top: 4px;
+    display: block;
+    float: right;
+      }
+      }
+
+      .navbar-expand-lg .navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+    color: #8d949f;
+}
 </style>
