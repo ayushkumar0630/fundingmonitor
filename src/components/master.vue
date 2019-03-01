@@ -1,10 +1,9 @@
 <template>
   <div class="home">
-    <section class="section-1">
+    <section class="section-1 product-info">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="product-description">
               <div class="row">
                 <div class="col-md-6">
                   <h1>Painless Fund Monitoring</h1>
@@ -22,13 +21,12 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-2 isbold">
+    <section class="section-2 about isbold">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -556,8 +554,8 @@
       </div>
     </section>
 
-    <section class="section-3">
-      <div class="howitworks">
+    <section class="section-3 howitworks">
+      <div>
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -579,8 +577,290 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">sasas</div>
-            <div class="col-md-4">sasas</div>
+            <div class="col-md-4">
+              <div class="how-box">
+                <div class="img-container">
+                  <div class="number">2</div>
+                  <div class="image">
+                    <img src="https://cronhub.io/img/clock-icon.svg" alt>
+                  </div>
+                </div>
+                <div class="box-title">We continuously monitor</div>
+                <div class="box-desc">
+                  <p>After your cron job makes the first ping we will start monitoring your job.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="how-box">
+                <div class="img-container">
+                  <div class="number">3</div>
+                  <div class="image">
+                    <img src="https://cronhub.io/img/bell-icon.svg" alt>
+                  </div>
+                </div>
+                <div class="box-title">We send you alerts</div>
+                <div class="box-desc">
+                  <p>If your job fails to run on schedule or runs longer than it should we will alert you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-4 isbold features">
+      <div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-title">Features</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="feature-box">
+                <div class="icon">
+                  <img src="https://cronhub.io/img/clock-feature-icon.svg" alt>
+                </div>
+                <div class="feature-title">Uptime monitoring</div>
+                <div
+                  class="feature-subtitle"
+                >You can setup a policy to make sure your cron job always runs on time. If it fails we will alert you.</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="feature-box">
+                <div class="icon">
+                  <img src="https://cronhub.io/img/clock-feature-icon.svg" alt>
+                </div>
+                <div class="feature-title">Time monitoring</div>
+                <div
+                  class="feature-subtitle"
+                >You can setup a policy to make sure your cron job always runs on time. If it fails we will alert you.</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="feature-box">
+                <div class="icon">
+                  <img src="https://cronhub.io/img/clock-feature-icon.svg" alt>
+                </div>
+                <div class="feature-title">Beautiful dashboard</div>
+                <div
+                  class="feature-subtitle"
+                >You can setup a policy to make sure your cron job always runs on time. If it fails we will alert you.</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="feature-box">
+                <div class="icon">
+                  <img src="https://cronhub.io/img/clock-feature-icon.svg" alt>
+                </div>
+                <div class="feature-title">Instant alerts</div>
+                <div
+                  class="feature-subtitle"
+                >Get instant alerts via email, Slack, Pagerduty, SMS or webhook. Choose the channels that works for you.</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="feature-box">
+                <div class="icon">
+                  <img src="https://cronhub.io/img/clock-feature-icon.svg" alt>
+                </div>
+                <div class="feature-title">Team collaboration</div>
+                <div
+                  class="feature-subtitle"
+                >You can invite your team members to collaborate on Cronhub with a shared dashboard.</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="feature-box">
+                <div class="icon">
+                  <img src="https://cronhub.io/img/clock-feature-icon.svg" alt>
+                </div>
+                <div class="feature-title">Metrics visualized</div>
+                <div
+                  class="feature-subtitle"
+                >You can see how many times your cron job ran and how the running time evolved over time.</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="feature-box">
+                <div class="icon">
+                  <img src="https://cronhub.io/img/clock-feature-icon.svg" alt>
+                </div>
+                <div class="feature-title">Weekly reports</div>
+                <div
+                  class="feature-subtitle"
+                >Every Sunday we take a snapshot of all your monitors and send you an email report with insights.</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="feature-box">
+                <div class="icon">
+                  <img src="https://cronhub.io/img/clock-feature-icon.svg" alt>
+                </div>
+                <div class="feature-title">Active suppport</div>
+                <div class="feature-subtitle">Most support requests are answered within 24 hours.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-5 reccomendation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="byfounder">
+              <div class="profile">
+                <div class="picture">
+                  <img src="https://cronhub.io/img/tigran.jpg" alt>
+                </div>
+                <div class="comment">
+                  <p>I built Cronhub to scratch my own itch. While working at Buffer and on my side-projects, I've realized that most cron jobs are like black holes. We don't know anything about them. Cronhub allows me to stay on top of my scheduled tasks and never worry.</p>
+                </div>
+                <div class="sign">Tigran Hakobyan - Creator of Cronhub</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-6 isbold settingup">
+      <div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-title">Setting up a monitor is breeze</div>
+
+              <div class="instruction">
+                <div class="info text-align-center">
+                  <p>When you create a new monitor you will get a unique ping URL, like the one below.</p>
+                </div>
+                <div class="code">https://cronhub.io/ping/1f5e3410-254c-11e8-b61d-55875966d031</div>
+
+                <div class="info">
+                  <p>Make any HTTP request to this URL from your cron job or scheduled script. When this URL is not requested for a time period then you will get alerted. The time period is based on your cron and monitor schedule which should be the same.</p>
+                  <p>Here are some examples how you can make requests to the URL.</p>
+                </div>
+                <div class="tab">
+                  <div>
+                    <b-tabs content-class="mt-3">
+                      <b-tab title="Crontab" active>
+                        <div class="code-segment">
+                          <code>* * * * * your_script.sh && curl -fsS --retry 3 https://cronhub.io/ping/1f5e3410-254c-11e8-b61d-55875966d031 > /dev/null</code>
+                        </div>
+                      </b-tab>
+                      <b-tab title="PHP" active>
+                        <div class="code-segment">
+                          <code>file_get_contents("https://cronhub.io/ping/1f5e3410-254c-11e8-b61d-55875966d031");</code>
+                        </div>
+                      </b-tab>
+                      <b-tab title="Bash">
+                        <div class="code-segment">
+                          <code>curl --retry 2 https://cronhub.io/ping/1f5e3410-254c-11e8-b61d-55875966d031</code>
+                        </div>
+                      </b-tab>
+                      <b-tab title="Node">
+                        <div class="code-segment text-align-left">
+                          <code>var https = require('https');
+                            <br>https.get("https://cronhub.io/ping/1f5e3410-254c-11e8-b61d-55875966d031");
+                          </code>
+                        </div>
+                      </b-tab>
+                      <b-tab title="Python">
+                        <div class="code-segment text-align-left">
+                          <code># using urllib2:
+                            <br>import urllib2
+                            <br>urllib2.urlopen("https://cronhub.io/ping/1f5e3410-254c-11e8-b61d-55875966d031")
+                          </code>
+                        </div>
+                      </b-tab>
+                    </b-tabs>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="trustedby">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+              <div class="section-title">Trusted By</div>
+              </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="trusted-logo">
+              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
+            </div>
+          </div>
+           <div class="col-md-2">
+            <div class="trusted-logo">
+              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
+            </div>
+          </div>
+           <div class="col-md-2">
+            <div class="trusted-logo">
+              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
+            </div>
+          </div>
+           <div class="col-md-2">
+            <div class="trusted-logo">
+              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
+            </div>
+          </div>
+           <div class="col-md-2">
+            <div class="trusted-logo">
+              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
+            </div>
+          </div>
+           <div class="col-md-2">
+            <div class="trusted-logo">
+              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="tryfundingmonitor">
+              <div class="title">Try Funding Monitor with your team for free</div>
+                <div class="start">
+                    <a href="#" class="btn-start btn-start-2">Get Started</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="footer-col">
+              <div class="col-title">About</div>
+              <div class="col-row"><a href="">Changelog</a></div>
+              <div class="col-row"><a href="">Public Roadmap</a></div>
+              <div class="col-row"><a href="">API Status</a></div>
+              <div class="col-row"><a href="">Terms & Privacy Policy</a></div>
+              <div class="col-row"><a href="">FAQ</a></div>
+            </div>
+          </div>
+             <div class="col-md-3">
+            <div class="footer-col">
+              <div class="col-title">Contact</div>
+              <div class="col-row"><a href="">test@findingmonitor.com</a></div>
+              <div class="col-row"><a href="">Twitter</a></div>
+              <div class="col-row"><a href="">Blog</a></div>
+            </div>
           </div>
         </div>
       </div>
@@ -602,14 +882,25 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 @import "../scss/common.scss";
+@import "https://fonts.googleapis.com/css?family=Ubuntu+Mono";
+
 body {
   section {
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem 5rem 1.5rem;
 
     color: #5b5b5b;
     &.isbold {
-      background-image: linear-gradient(141deg, #ffba5a, #fa7313 71%, #ff6a00);
+      background-image: linear-gradient(141deg, #fa7d4c, #ffba5a);
+      .section-title {
+        color: #ffffff;
+      }
 
+      .section-sub-title {
+        color: #ffffff;
+      }
+    }
+
+    &.about {
       .section-title {
         color: #ffffff;
         font-size: 32px;
@@ -628,12 +919,12 @@ body {
       }
     }
 
-
-.section-title{    
-  font-size: 34px;
-    font-weight: 500;
-    color: #5b5b5b;
-    text-align: center;
+    .section-title {
+      font-size: 32px;
+      font-weight: 500;
+      color: #5b5b5b;
+      text-align: center;
+      margin-bottom: 80px;
     }
     .section-sub-title {
       color: #ffffff;
@@ -641,59 +932,109 @@ body {
       margin-top: 14px;
       margin-bottom: 36px;
     }
+  }
 
-
-}
-
-.howitworks{
-  .how-box{
-    
-        text-align: center;
-      .img-container{
+  .howitworks {
+    padding: 4rem 1.5rem;
+    .how-box {
+      text-align: center;
+      .img-container {
         position: relative;
-      // .number{}
-      
-       .image{
-         width: 128px;
-         margin: 0 auto;
-
-         img{
-           width: 100%;
-         }
-       }
+        .image {
+          width: 102px;
+          margin: 0 auto;
+          img {
+            width: 100%;
+          }
+        }
       }
 
-      .box-title{
-        font-size: 28px;
+      .box-title {
+        font-size: 24px;
         font-weight: 500;
         margin: 14px 0 4px 0;
       }
-      .box-desc{
-            margin-top: 4px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #8c8b8b;
+      .box-desc {
+        margin-top: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #8c8b8b;
       }
 
-      .number{
-            position: absolute;
-    left: 0;
-    right: 40px;
-    margin: 0 auto;
+      .number {
+        position: absolute;
+        left: 0;
+        right: 108px;
+        top: -36px;
+        margin: 0 auto;
+        font-weight: bold;
+        font-size: 24px;
+        color: #ffbe65;
       }
+    }
   }
+
+  .features {
+    padding: 4rem 1.5rem 2rem 1.5rem;
+    text-align: center;
+    .feature-box {
+      color: #ffffff;
+      text-align: center;
+      padding: 0px 10px 54px 10px;
+      .icon {
+        width: 54px;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+      .feature-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 14px 0 10px 0;
+      }
+      .feature-subtitle {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .reccomendation {
+    .byfounder {
+      .profile {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        .picture {
+          width: 80px;
+          height: 80px;
+          overflow: hidden;
+          border-radius: 100px;
+          margin: 0 auto;
+          margin-bottom: 30px;
+          position: relative;
+          img {
+            position: absolute;
+            width: 100%;
+            left: 0;
+          }
+        }
+
+        .comment p {
+          font-size: 24px;
+        }
+        .sign {
+          font-size: 20px;
+        }
+      }
+    }
   }
 }
-.product-description {
-  h1 {
-    font-size: 46px;
-    color: #686868;
-  }
-  .btn-start {
-    background-color: #f95300;
-    background: -moz-linear-gradient(left, #ee7a23 0%, #f95300 100%);
-    background: -webkit-linear-gradient(left, #ee7a23 0%, #f95300 100%);
-    background: linear-gradient(to right, #ee7a23 0%, #f95300 100%);
+ .btn-start {
+    background-color: #f2a233;
+    background: -moz-linear-gradient(left, #ff675a 0%, #f2a233 100%);
+    background: -webkit-linear-gradient(left, #ff675a 0%, #f2a233 100%);
+    background: linear-gradient(to right, #ff675a 0%, #f2a233 100%);
     padding: 12px 18px;
     color: #fff;
     font-size: 18px;
@@ -701,7 +1042,19 @@ body {
     font-weight: 600;
     display: block;
     width: fit-content;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: none;
+      color:#ffffff;
+    }
   }
+section.product-info {
+  h1 {
+    font-size: 46px;
+    color: #686868;
+  }
+ 
 
   .sub-desc {
     font-size: 22px;
@@ -716,4 +1069,128 @@ body {
     margin-top: 4px;
   }
 }
+
+section.settingup {
+  .instruction {
+    color: #ffffff;
+    font-size: 22px;
+    width: 90%;
+    margin: 0 auto;
+
+    .code {
+      background-color: #ffffff;
+      color: #333;
+      font-size: 18px;
+      padding: 28px 20px;
+      text-align: center;
+      border-radius: 6px;
+      margin: 30px 0;
+    }
+  }
+}
+
+section.trustedby{
+  .section-title{
+    margin-bottom:56px;
+  }
+  .trusted-logo{
+    padding:14px;
+    img{
+      width:100%;
+    }
+  }
+
+  .tryfundingmonitor{
+    .title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 56px;
+
+    }
+
+.start{
+  text-align: center;
+    .btn-start-2{
+      margin: 0 auto;
+      margin-top:48px;
+    padding: 12px 42px;
+    }
+  }
+  }
+}
+
+section.footer{
+    border-top: 1px solid #eee;
+    padding-top: 4rem;
+  .footer-col{
+    .col-title{
+      font-size: 22px;
+      font-weight: 500;
+      color: #333333;
+      margin-bottom:4px;
+    }
+
+    .col-row{
+      padding: 4px 0;
+      a{
+        color:#919191;
+        font-size: 16px;
+
+        &:hover{
+          text-decoration: none;
+          color:#333333;
+        }
+      }
+    }
+  }
+}
+
 </style>
+
+
+<style lang="scss">
+.tab {  
+    padding: 20px 0;
+  .nav-tabs {
+    border: none !important;
+
+    li {
+      a {
+        color: #ffffff;
+        border: none;
+        font-size: 18px;
+
+        &.active {
+          color: #fb7210;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .tab-content {
+    background-color: #ffffff;
+    margin-top: 0px !important;
+    color: #333;
+    padding: 20px;
+    min-height: 100px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    outline: none;
+
+    .tab-pane{
+    outline: none;      
+    }
+    .code-segment {
+      font-size: 16px;
+      width: 100%;
+      text-align: center;
+      font-family: "Ubuntu Mono", monospace;
+      outline: none;
+      padding:20px;
+    }
+  }
+}
+</style>
+
