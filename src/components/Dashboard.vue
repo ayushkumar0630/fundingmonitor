@@ -4,7 +4,10 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
-            <div class="title"><span>Opportunities</span><span class="icon-title"></span></div>
+            <div class="title">
+              <span>Opportunities</span>
+              <span class="icon-title"></span>
+            </div>
           </div>
           <div class="col-md-6">
             <div class="functions clearfix">
@@ -18,18 +21,25 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
+            <div class="row">
+          <div class="col-md-6">
             <div class="grid-options">
               <span class="option-1"></span>
               <span class="option-2"></span>
               <span class="option-search">
-                <input type="text" name="Search field values" id="" class="txt-search">
+                <input type="text" name="Search field values" id class="txt-search">
               </span>
+            </div>
+            </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="content float-right">
               <div class="row-count">28 Opportunities</div>
-              <div class="filter"><span class="filter-icon"></span><span class="filter-label">Filters</span></div>
+              <div class="filter">
+                <span class="filter-icon"></span>
+                <span class="filter-label">Filters</span>
+              </div>
             </div>
           </div>
         </div>
@@ -39,10 +49,8 @@
       <thead>
         <tr>
           <th width="20px">
-            <label>
-              <input type="checkbox" class="filled-in">
+              <input type="checkbox" class="chk">
               <span></span>
-            </label>
           </th>
           <th>Company</th>
           <th>First Name</th>
@@ -100,13 +108,12 @@ export default {
 @import "../scss/common.scss";
 .dashboard {
   .header {
-    padding: 10px;
+    padding: 10px 0;
 
-    .container-fluid{
-        padding:0px;
-        .row{
-            margin-bottom:0px;
-        }
+    .container-fluid {
+      .row {
+        margin-bottom: 0px;
+      }
     }
 
     .title {
@@ -114,18 +121,18 @@ export default {
       color: #fead41;
       line-height: 40px;
 
-      span{
-        display:inline-block;
-    vertical-align: middle;     
+      span {
+        display: inline-block;
+        vertical-align: middle;
       }
     }
 
-    .icon-title{
+    .icon-title {
       width: 24px;
       height: 24px;
-      background-image: url('../assets/icon-title.svg');
+      background-image: url("../assets/icon-title.svg");
       background-repeat: no-repeat;
-      margin-left:10px;
+      margin-left: 10px;
     }
 
     .btn-add {
@@ -141,49 +148,52 @@ export default {
     }
   }
 
-  .sub-header{
-    .row{
-      margin-bottom:0px;
+  .sub-header {
+    .row {
+      margin-bottom: 0px;
     }
-    .row-count{
+    .row-count {
       font-size: 14px;
-      color:#8f8f8f;
-      display:inline-block;
-    margin-top: 8px;
+      color: #8f8f8f;
+      display: inline-block;
+      margin-top: 8px;
     }
 
-    .filter{
-      
-      display:inline-block;
-    margin-top: 8px;
+    .filter {
+      display: inline-block;
+      margin-top: 8px;
       margin-left: 4px;
-      span{
-      display:inline-block;
-      vertical-align: middle;
+      span {
+        display: inline-block;
+        vertical-align: middle;
 
-      &.filter-icon{
-        width: 20px;
-        height:20px;
-        margin-right: 4px;
-        background-image: url('../assets/icon-filter.svg');
-        background-repeat: no-repeat;
+        &.filter-icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 4px;
+          background-image: url("../assets/icon-filter.svg");
+          background-repeat: no-repeat;
+        }
       }
-      }
-
     }
 
-
-    .txt-search{
-      width: 200px;
-      background-image: url('../assets/icon-search.svg');
-      background-repeat: no-repeat;    background-position: right 10px top 2px;
-    height: 34px;
-    padding-right: 40px;
+    .txt-search {
+      width: 100%;
+      background-image: url("../assets/icon-search.svg");
+      background-repeat: no-repeat;
+      background-position: right 12px top 6px;
+      padding-right: 40px;
+      padding: 8px;
+      border-radius: 3px;
+      border: 1px solid #a6b4c2;
+      border-radius: 4px;
     }
   }
 }
 
 .data-grid {
+      width: 100%;
+    margin-top: 10px;
   thead {
     tr {
       th {
@@ -224,11 +234,11 @@ export default {
         }
       }
 
-    //   &:nth-child(odd) {
-    //     td {
-    //       background: #ddd;
-    //     }
-    //   }
+      //   &:nth-child(odd) {
+      //     td {
+      //       background: #ddd;
+      //     }
+      //   }
     }
   }
 }

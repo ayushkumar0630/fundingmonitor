@@ -16,7 +16,7 @@
   <!-- </div> -->
     <div>
       <section class="section-nav">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
      <b-navbar toggleable="lg" type="light" variant="info" class="nav-wrapper">
     <b-navbar-brand href="#">
