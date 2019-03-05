@@ -80,8 +80,8 @@ export default {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
     // border: 1px solid #ffffff;
     border-radius: 6px;
-    margin: 8% auto;
-    margin-bottom:0px;
+    margin: 3% auto;
+    margin-bottom: 60px;
     @media only screen and (min-width: $break-x-large) {
    
     width: 60%;

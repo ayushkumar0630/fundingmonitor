@@ -9,15 +9,14 @@
                   <h1>Painless Fund Monitoring</h1>
                   <div
                     class="sub-desc"
-                  >Get instant alerts when any of your background jobs fail silently or run longer than expected.</div>
+                  >Keep track of all your investors in one place.</div>
                   <div class="start">
                     <a href="#" class="btn-start">Get started for free</a>
-                    <div class="info">It takes less than a minute to setup a monitor</div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="desc-img">
-                    <img src="https://cronhub.io/img/ch-dashboard-shadow.png" alt>
+                    <svg src="@/assets/financial_dashboard.svg"></svg>
                   </div>
                 </div>
               </div>
