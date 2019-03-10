@@ -5,8 +5,8 @@
         <div class="row">
      <b-navbar toggleable="lg" type="light" variant="info" class="nav-wrapper">
     <b-navbar-brand href="#">
-      <router-link :to="{ name: 'master'}">
-       <a class="brand-logo">
+      <router-link :to="{ name: 'master'}" class="brand-logo">
+       <a>
           <img src="../assets/fundingmonitor.svg" alt width="40px">
           <span>Funding Monitor</span>
         </a>
@@ -16,22 +16,12 @@
     <b-navbar-toggle target="nav_collapse" />
 
     <b-collapse is-nav id="nav_collapse">
-      <!-- <b-navbar-nav>
-        <b-nav-item href="#">DOCS</b-nav-item>
-        <b-nav-item href="#" >PRICING</b-nav-item>
-        <b-nav-item href="#" >FEATURES</b-nav-item>
-        <b-nav-item href="#" >FAQ</b-nav-item>
-        <b-nav-item href="#" >BLOG</b-nav-item>
-        <b-nav-item href="#" >FREE TOOLS</b-nav-item>
-      </b-navbar-nav> -->
-
-      <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
 
        
          <b-nav-item >
-          <router-link :to="{ name: 'signin'}">
-           <div class="user">
+          <router-link :to="{ name: 'signin'}" class="user">
+           <div>
             <span class="icon user"></span>
             <span class="label" style="color: #6e6e6e">SIGN IN</span>
            </div>
@@ -84,7 +74,7 @@ nav{
       font-size: 18px;
       display: block;
       float: left;
-    margin-top: 8px;
+      margin-top: 8px;
       
     font-weight: 500;
     color: #6e6e6e ;

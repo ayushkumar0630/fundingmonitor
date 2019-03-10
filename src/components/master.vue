@@ -11,7 +11,7 @@
                     class="sub-desc"
                   >A personal CRM to keep track of all your investors in one place.</div>
                   <div class="start">
-                    <router-link :to="{ name: 'signin'}">
+                    <router-link :to="{ name: 'signup'}">
                       <a class="btn-start" style="color: #FFFFFF">Get started for free</a>
                     </router-link>
                   </div>
@@ -128,7 +128,9 @@
                   <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Employees</li>
                   <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Support</li>
                 </ul>
-                <a href="#" class="btn btn-block btn-primary text-uppercase">Sign Up</a>
+                <router-link :to="{name:'signup'}">
+                  <a class="btn btn-block btn-primary text-uppercase" style="color:#FFFFFF">Sign Up</a>
+                </router-link>
               </div>
             </div>
           </div>
@@ -146,7 +148,9 @@
                   <li><span class="fa-li"><i class="fas fa-check"></i></span>5 Employees</li>
                   <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Support</li>
                 </ul>
-                <a href="#" class="btn btn-block btn-primary text-uppercase">Sign Up</a>
+                <router-link :to="{name:'signup'}">
+                  <a class="btn btn-block btn-primary text-uppercase" style="color: #FFFFFF">Sign Up</a>
+                </router-link>
               </div>
             </div>
           </div>
@@ -164,7 +168,9 @@
                   <li><span class="fa-li"><i class="fas fa-check"></i></span>No Employee Limit</li>
                   <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Support</li>
                 </ul>
-                <a href="#" class="btn btn-block btn-primary text-uppercase">Sign Up</a>
+                <router-link :to="{name:'signup'}">
+                  <a class="btn btn-block btn-primary text-uppercase" style="color:#FFFFFF">Sign Up</a>
+                </router-link>
               </div>
             </div>
           </div>
@@ -201,7 +207,9 @@
             <div class="tryfundingmonitor">
               <div class="title" style="margin-top: 0px">Try Funding Monitor with your team for free</div>
                 <div class="start">
-                    <a href="#" class="btn-start-referral btn-start-2">Get Started</a>
+                    <router-link :to="{name:'signup'}" class="btn-start-referral btn-start-2">
+                      <a>Get Started</a>
+                    </router-link>
                   </div>
             </div>
           </div>
