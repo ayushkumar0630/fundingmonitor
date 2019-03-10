@@ -1,48 +1,42 @@
 <template>
-  <!-- <div class="navbar"> -->
-    <!-- <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">
-          <img src="../assets/fundingmonitor.svg" alt width="40px">
-          <span>Funding Monitor</span>
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down sub-nav">
-          <li>
-            <router-link :to="{ name: 'signin'}" class="link"><span class="icon user"></span><span class="label">Sign In</span></router-link>
-          </li>
-        </ul>
-      </div>
-    </nav> -->
-  <!-- </div> -->
     <div>
       <section class="section-nav">
       <div class="container-fluid">
         <div class="row">
      <b-navbar toggleable="lg" type="light" variant="info" class="nav-wrapper">
     <b-navbar-brand href="#">
+      <router-link :to="{ name: 'master'}">
        <a href="#" class="brand-logo">
           <img src="../assets/fundingmonitor.svg" alt width="40px">
           <span>Funding Monitor</span>
         </a>
+      </router-link>
     </b-navbar-brand>
 
     <b-navbar-toggle target="nav_collapse" />
 
     <b-collapse is-nav id="nav_collapse">
-      <b-navbar-nav>
+      <!-- <b-navbar-nav>
         <b-nav-item href="#">DOCS</b-nav-item>
         <b-nav-item href="#" >PRICING</b-nav-item>
         <b-nav-item href="#" >FEATURES</b-nav-item>
         <b-nav-item href="#" >FAQ</b-nav-item>
         <b-nav-item href="#" >BLOG</b-nav-item>
         <b-nav-item href="#" >FREE TOOLS</b-nav-item>
-      </b-navbar-nav>
+      </b-navbar-nav> -->
 
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
 
        
-         <b-nav-item href="#" ><div class="user"><span class="icon user"></span><span class="label">SIGN IN</span></div></b-nav-item>
+         <b-nav-item >
+          <router-link :to="{ name: 'signin'}">
+           <div class="user">
+            <span class="icon user"></span>
+            <span class="label">SIGN IN</span>
+           </div>
+          </router-link>
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
