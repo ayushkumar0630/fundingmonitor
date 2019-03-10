@@ -216,12 +216,12 @@
             <div class="byfounder">
               <div class="profile">
                 <div class="picture">
-                  <img src="https://cronhub.io/img/tigran.jpg" alt>
+                  <img src="@/assets/Ayush.jpg">
                 </div>
                 <div class="comment">
-                  <p>I built Cronhub to scratch my own itch. While working at Buffer and on my side-projects, I've realized that most cron jobs are like black holes. We don't know anything about them. Cronhub allows me to stay on top of my scheduled tasks and never worry.</p>
+                  <p>My work on FundingMonitor came from the lack of tools to help entrepreneurs manage their fundraising efforts. It was far too common to be bouncing around Excel and Google sheets trying to keep up with whats going on. With FundingMonitor I hope to make all this a thing of the past.</p>
                 </div>
-                <div class="sign">Tigran Hakobyan - Creator of Cronhub</div>
+                <div class="sign">Ayush Kumar - FundingMonitor</div>
               </div>
             </div>
           </div>
@@ -229,52 +229,16 @@
       </div>
     </section>
 
-    <section class="trustedby">
+    <section class="trustedby isbold" style="padding: 20px">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-              <div class="section-title">Trusted By</div>
-              </div>
         </div>
-        <div class="row">
-          <div class="col-md-2">
-            <div class="trusted-logo">
-              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
-            </div>
-          </div>
-           <div class="col-md-2">
-            <div class="trusted-logo">
-              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
-            </div>
-          </div>
-           <div class="col-md-2">
-            <div class="trusted-logo">
-              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
-            </div>
-          </div>
-           <div class="col-md-2">
-            <div class="trusted-logo">
-              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
-            </div>
-          </div>
-           <div class="col-md-2">
-            <div class="trusted-logo">
-              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
-            </div>
-          </div>
-           <div class="col-md-2">
-            <div class="trusted-logo">
-              <img src="https://cronhub.io/img/customers/buffer.png" alt="">
-            </div>
-          </div>
-        </div>
-
         <div class="row">
           <div class="col-md-12">
             <div class="tryfundingmonitor">
-              <div class="title">Try Funding Monitor with your team for free</div>
+              <div class="title" style="margin-top: 0px">Try Funding Monitor with your team for free</div>
                 <div class="start">
-                    <a href="#" class="btn-start btn-start-2">Get Started</a>
+                    <a href="#" class="btn-start-referral btn-start-2">Get Started</a>
                   </div>
             </div>
           </div>
@@ -432,16 +396,17 @@ body {
   .reccomendation {
     .byfounder {
       .profile {
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
         text-align: center;
         .picture {
-          width: 80px;
-          height: 80px;
-          overflow: hidden;
+          width: 100px;
+          height: 100px;
+          overflow-x: hidden;
+          overflow-y: visible;
           border-radius: 100px;
           margin: 0 auto;
-          margin-bottom: 30px;
+          margin-bottom: 0px;
           position: relative;
           img {
             position: absolute;
@@ -478,6 +443,17 @@ body {
       text-decoration: none;
       color:#ffffff;
     }
+  }
+  .btn-start-referral{
+    background-color: #ffffff;
+    padding: 12px 18px;
+    color: #fa7d4c;
+    font-size: 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+    text-decoration: none;
   }
 section.product-info {
   padding: 40px;
@@ -537,6 +513,7 @@ section.trustedby{
     font-size: 24px;
     font-weight: 500;
     margin-top: 56px;
+    color: #FFFFFF;
 
     }
 
