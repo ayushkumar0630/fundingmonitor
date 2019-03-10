@@ -6,7 +6,7 @@
      <b-navbar toggleable="lg" type="light" variant="info" class="nav-wrapper">
     <b-navbar-brand href="#">
       <router-link :to="{ name: 'master'}">
-       <a href="#" class="brand-logo">
+       <a class="brand-logo">
           <img src="../assets/fundingmonitor.svg" alt width="40px">
           <span>Funding Monitor</span>
         </a>
@@ -33,7 +33,7 @@
           <router-link :to="{ name: 'signin'}">
            <div class="user">
             <span class="icon user"></span>
-            <span class="label">SIGN IN</span>
+            <span class="label" style="color: #6e6e6e">SIGN IN</span>
            </div>
           </router-link>
         </b-nav-item>

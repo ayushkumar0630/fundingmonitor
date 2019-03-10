@@ -11,7 +11,9 @@
                     class="sub-desc"
                   >A personal CRM to keep track of all your investors in one place.</div>
                   <div class="start">
-                    <a href="#" class="btn-start">Get started for free</a>
+                    <router-link :to="{ name: 'signin'}">
+                      <a class="btn-start" style="color: #FFFFFF">Get started for free</a>
+                    </router-link>
                   </div>
                 </div>
                 <div class="col-md-6">
