@@ -47,12 +47,19 @@
                   </div>
                 </div>
                 <div class="input-container">
-                  <input type="button" value="Sign In" class="btn-signin">
+                  <div class="input-label">Confirm Password</div>
+                  <div class="input-text">
+                    <input type="password" name id class="text">
+                  </div>
                 </div>
                 <div class="input-container">
-                  <router-link to="/signup">
-                    <a class="link-forgot">Sign Up</a>
-                  </router-link>
+                  <div class="input-label">Company Name</div>
+                  <div class="input-text">
+                    <input type="text" name id class="text">
+                  </div>
+                </div>
+                <div class="input-container">
+                  <input type="button" value="Sign Up" class="btn-signin">
                 </div>
               </div>
             </div>
@@ -68,7 +75,7 @@ import Vue from 'vue'
 import VueParticles from 'vue-particles'
 Vue.use(VueParticles)
 export default {
-  name: "signin",
+  name: "signup",
   data() {
     return {};
   }
@@ -91,7 +98,7 @@ export default {
     .about {
       position: relative;
       width: 40%;
-      height: 460px;
+      height: 600px;
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
       background-color: #ffba5a;
@@ -178,13 +185,12 @@ padding: 40px;
 
     .link-forgot{
       color: #8b8b8b;
-      font-size: 15px;
-      margin-top: 10px;
-      float: right;
-      font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    float: right;
 
       &:hover{
-        color:#f0751f;
+        color:#333;
       }
     }
 

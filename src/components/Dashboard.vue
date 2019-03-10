@@ -5,13 +5,13 @@
         <div class="row">
           <div class="col-md-6">
             <div class="title">
-              <span>Opportunities</span>
+              <span>Investors</span>
               <span class="icon-title"></span>
             </div>
           </div>
           <div class="col-md-6">
             <div class="functions clearfix">
-              <input type="button" class="btn-add float-right" value="Add Opportunity">
+              <input type="button" class="btn-add float-right" value="Add Investor">
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@
           </div>
           <div class="col-md-6">
             <div class="content float-right">
-              <div class="row-count">28 Opportunities</div>
+              <div class="row-count">28 Investors</div>
               <div class="filter">
                 <span class="filter-icon"></span>
                 <span class="filter-label">Filters</span>
