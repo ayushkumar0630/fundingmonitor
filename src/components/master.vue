@@ -6,7 +6,7 @@
           <div class="col-md-12">
               <div class="row">
                 <div class="col-md-6">
-                  <h1>Painless Fund Raising Monitoring</h1>
+                  <h1>A Painless Way To Manage Fund Raising</h1>
                   <div
                     class="sub-desc"
                   >A personal CRM to keep track of all your investors in one place.</div>
@@ -33,7 +33,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="desc-img offset-md-3">
-                    <img></img>
+                    <img src="@/assets/rocket.svg" id="rocket_dashboard"></img>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -42,7 +42,9 @@
                   >Frustrated with managing investors?</p>
                   <p
                     class="section-sub-title"
-                  >Funding monitor ensures all your fundraising efforts are in one place for your whole team to see.</p>
+                  >Funding monitor ensures all your fundraising efforts are in one place for your whole team to see.
+                  No more navigating sheets and excel documents to find investor information. With FundingMonitor we will help take your company to the moon! 
+                  </p>
                 </div>
               </div>
             </div>
@@ -65,12 +67,12 @@
                 <div class="img-container">
                   <div class="number">1</div>
                   <div class="image">
-                    <img src="https://cronhub.io/img/check-square-icon.svg" alt>
+                    <img src="@/assets/profile_data.svg" id="how_it_works">
                   </div>
                 </div>
-                <div class="box-title">You setup your monitor</div>
+                <div class="box-title">You setup your company profile</div>
                 <div class="box-desc">
-                  <p>Creating and integrating a new monitor with your cron job is a breeze.</p>
+                  <p>Create an account for your company in a few simple steps.</p>
                 </div>
               </div>
             </div>
@@ -79,12 +81,12 @@
                 <div class="img-container">
                   <div class="number">2</div>
                   <div class="image">
-                    <img src="https://cronhub.io/img/clock-icon.svg" alt>
+                    <img src="@/assets/add_user.svg" id="how_it_works">
                   </div>
                 </div>
-                <div class="box-title">We continuously monitor</div>
+                <div class="box-title">Add Employees</div>
                 <div class="box-desc">
-                  <p>After your cron job makes the first ping we will start monitoring your job.</p>
+                  <p>Add the employees in your organization.</p>
                 </div>
               </div>
             </div>
@@ -93,12 +95,12 @@
                 <div class="img-container">
                   <div class="number">3</div>
                   <div class="image">
-                    <img src="https://cronhub.io/img/bell-icon.svg" alt>
+                    <img src="@/assets/add_notes.svg" id="how_it_works">
                   </div>
                 </div>
-                <div class="box-title">We send you alerts</div>
+                <div class="box-title">Add Investor Information</div>
                 <div class="box-desc">
-                  <p>If your job fails to run on schedule or runs longer than it should we will alert you.</p>
+                  <p>Add investor information collaboratively to FundingMonitor.</p>
                 </div>
               </div>
             </div>
@@ -282,24 +284,14 @@
     <section class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <div class="footer-col">
-              <div class="col-title">About</div>
-              <div class="col-row"><a href="">Changelog</a></div>
-              <div class="col-row"><a href="">Public Roadmap</a></div>
-              <div class="col-row"><a href="">API Status</a></div>
-              <div class="col-row"><a href="">Terms & Privacy Policy</a></div>
-              <div class="col-row"><a href="">FAQ</a></div>
-            </div>
-          </div>
              <div class="col-md-3">
-            <div class="footer-col">
-              <div class="col-title">Contact</div>
-              <div class="col-row"><a href="">test@findingmonitor.com</a></div>
-              <div class="col-row"><a href="">Twitter</a></div>
-              <div class="col-row"><a href="">Blog</a></div>
+              <div class="footer-col">
+                <div class="col-title">Contact</div>
+                <div class="col-row"><a href="">ayush@fundingmonitor.io</a></div>
+                <div class="col-row"><a href="">Twitter</a></div>
+                <div class="col-row"><a href="">Blog</a></div>
+              </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
@@ -634,6 +626,14 @@ section.footer{
 #financial_dashboard{
   width: 500px;
   horizontal-align: right;
+}
+#rocket_dashboard{
+  width: 300px;
+  horizontal-align: left;
+}
+#how_it_works{
+  width: 200px;
+  height: 150px;
 }
 </style>
 
