@@ -37,13 +37,13 @@
                 <div class="input-container">
                   <div class="input-label">Email</div>
                   <div class="input-text">
-                    <input type="text" name id class="text">
+                    <input type="text" name id class="text" v-model="email">
                   </div>
                 </div>
                 <div class="input-container">
                   <div class="input-label">Password</div>
                   <div class="input-text">
-                    <input type="password" name id class="text">
+                    <input type="password" name id class="text" v-model="password">
                   </div>
                 </div>
                 <div class="input-container">
@@ -66,15 +66,28 @@
 <script>
 import Vue from 'vue'
 import VueParticles from 'vue-particles'
+import firebase from 'firebase'
+
 Vue.use(VueParticles)
+
 export default {
   name: "signin",
   data() {
-    return {};
+    return {
+      email: null,
+      password: null,
+      feedback: null
+    };
   },
   methods:{
     login: function(){
-      console.log("Button clicked")
+      if (!this.email | !this.password){
+        feedback = "Please Enter In Your Login Information"
+      }
+      else{
+        feedback = null
+        firebase.auth().signInWithEmailAndPassword(this.email, this.password).then()
+      }      
     }
   }
 };
@@ -225,6 +238,10 @@ padding: 40px;
       }
     }
   }
+}
+#feedback{
+  color: red;
+  text-align: center;
 }
 </style>
 
