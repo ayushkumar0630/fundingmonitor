@@ -35,7 +35,7 @@
 
               <div class="form-group">
                 <div class="input-container">
-                  <div class="input-label">Username</div>
+                  <div class="input-label">Email</div>
                   <div class="input-text">
                     <input type="text" name id class="text">
                   </div>
@@ -47,7 +47,7 @@
                   </div>
                 </div>
                 <div class="input-container">
-                  <input type="button" value="Sign In" class="btn-signin">
+                  <input type="button" value="Sign In" class="btn-signin" @click="login">
                 </div>
                 <div class="input-container">
                   <router-link to="/signup">
@@ -71,6 +71,11 @@ export default {
   name: "signin",
   data() {
     return {};
+  },
+  methods:{
+    login: function(){
+      console.log("Button clicked")
+    }
   }
 };
 </script>

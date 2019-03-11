@@ -35,31 +35,46 @@
 
               <div class="form-group">
                 <div class="input-container">
-                  <div class="input-label">Username</div>
+                  <div class="input-label">First Name</div>
                   <div class="input-text">
-                    <input type="text" name id class="text">
+                    <input type="text" name id class="text" v-model="first_name">
+                  </div>
+                </div>
+                <div class="input-container">
+                  <div class="input-label">Last Name</div>
+                  <div class="input-text">
+                    <input type="text" name id class="text" v-model="last_name">
+                  </div>
+                </div>
+                <div class="input-container">
+                  <div class="input-label">Email</div>
+                  <div class="input-text">
+                    <input type="text" name id class="text" v-model="email">
                   </div>
                 </div>
                 <div class="input-container">
                   <div class="input-label">Password</div>
                   <div class="input-text">
-                    <input type="password" name id class="text">
+                    <input type="password" name id class="text" v-model="password">
                   </div>
                 </div>
                 <div class="input-container">
                   <div class="input-label">Confirm Password</div>
                   <div class="input-text">
-                    <input type="password" name id class="text">
+                    <input type="password" name id class="text" v-model="password_confirm">
                   </div>
                 </div>
                 <div class="input-container">
                   <div class="input-label">Company Name</div>
                   <div class="input-text">
-                    <input type="text" name id class="text">
+                    <input type="text" name id class="text" v-model="company">
                   </div>
                 </div>
                 <div class="input-container">
-                  <input type="button" value="Sign Up" class="btn-signin">
+                  <p id="feedback" v-if="feedback"> {{ feedback }} </p>
+                </div>
+                <div class="input-container">
+                  <input type="button" value="Sign Up" class="btn-signin" @click="signup">
                 </div>
               </div>
             </div>
@@ -73,11 +88,44 @@
 <script>
 import Vue from 'vue'
 import VueParticles from 'vue-particles'
+import firebase from 'firebase'
+
 Vue.use(VueParticles)
+
 export default {
   name: "signup",
   data() {
-    return {};
+    return {
+      first_name: null,
+      last_name: null,
+      email: null,
+      password: null,
+      password_confirm: null,
+      company: null,
+      feedback: null
+    };
+  },
+  methods:{
+    signup: function(){
+      if (this.password != this.password_confirm){
+        console.log(this.feedback)
+        this.feedback = "Oops Passwords Aren't The Same"
+        console.log(this.feedback)
+      }
+      else if (!this.email | !this.password | !this.company | !this.first_name | !this.last_name) {
+        this.feedback = "Looks Like You Forgot A Field"
+      }
+      else{
+        this.feedback = null
+        firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(user => {
+          alert("Account Created!")
+          this.$router.push('signin')
+        }).catch(err => {
+          this.feedback = err.message
+        })
+
+      }
+    }
   }
 };
 </script>
@@ -98,7 +146,7 @@ export default {
     .about {
       position: relative;
       width: 40%;
-      height: 600px;
+      height: 780px;
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
       background-color: #ffba5a;
@@ -226,6 +274,10 @@ padding: 40px;
       }
     }
   }
+}
+#feedback{
+  color: red;
+  text-align: center;
 }
 </style>
 
