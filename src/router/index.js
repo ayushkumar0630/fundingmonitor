@@ -41,21 +41,21 @@ const router = new Router({
   ]
 })
 
-router.beforeEach((to, from, next) => {
+// router.beforeEach((to, from, next) => {
 
-  const currentUser = firebase.auth().currentUser;
-  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+//   const currentUser = firebase.auth().currentUser;
+//   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
 
-  if (requiresAuth && !currentUser){
-    next('signin');
-  }
-  else if (!requiresAuth && currentUser){
-    next('dashboard');
-  }
-  else {
-    next();
-  }
+//   if (requiresAuth && !currentUser){
+//     next('signin');
+//   }
+//   else if (!requiresAuth && currentUser){
+//     next('dashboard');
+//   }
+//   else {
+//     next();
+//   }
 
-});
+// });
 
 export default router;

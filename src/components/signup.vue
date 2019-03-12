@@ -71,6 +71,12 @@
                   </div>
                 </div>
                 <div class="input-container">
+                  <div class="input-label">Title</div>
+                  <div class="input-text">
+                    <input type="text" name id class="text" v-model="title">
+                  </div>
+                </div>
+                <div class="input-container">
                   <p id="feedback" v-if="feedback"> {{ feedback }} </p>
                 </div>
                 <div class="input-container">
@@ -89,6 +95,7 @@
 import Vue from 'vue'
 import VueParticles from 'vue-particles'
 import firebase from 'firebase'
+import {db} from '@/firebaseconf.js'
 
 Vue.use(VueParticles)
 
@@ -102,6 +109,7 @@ export default {
       password: null,
       password_confirm: null,
       company: null,
+      title: null,
       feedback: null
     };
   },
@@ -112,14 +120,23 @@ export default {
         this.feedback = "Oops Passwords Aren't The Same"
         console.log(this.feedback)
       }
-      else if (!this.email | !this.password | !this.company | !this.first_name | !this.last_name) {
+      else if (!this.email | !this.password | !this.company | !this.first_name | !this.last_name | !this.title) {
         this.feedback = "Looks Like You Forgot A Field"
       }
       else{
         this.feedback = null
         firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(user => {
-          alert("Account Created!")
-          this.$router.push('signin')
+          db.collection('Users').add(
+            { 
+              email: this.email, 
+              firstname: this.first_name, 
+              lastname: this.last_name, 
+              company: this.company,
+              title: this.title}
+          ).then(() => {
+            alert("Account Created!")
+            this.$router.push('signin') 
+          })
         }).catch(err => {
           this.feedback = err.message
         })
