@@ -82,11 +82,17 @@ export default {
   methods:{
     login: function(){
       if (!this.email | !this.password){
-        feedback = "Please Enter In Your Login Information"
+        this.feedback = "Please Enter In Your Login Information"
       }
       else{
-        feedback = null
-        firebase.auth().signInWithEmailAndPassword(this.email, this.password).then()
+        this.feedback = null
+        firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(() =>{
+          this.$router.push('/dashboard')
+        }
+        ).catch(err => {
+          this.feedback = err.message
+        } 
+        )
       }      
     }
   }

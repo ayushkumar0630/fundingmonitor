@@ -37,11 +37,23 @@
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import firebase from 'firebase'
+import { db } from '@/firebaseconf.js'
+ 
 export default {
   name: "navbar",
   data() {
-    return {};
-  }
+    return {
+      first_name: null,
+      last_name: null
+    };
+  },
+  // methods: {
+  //   beforeCreate() {
+  //     let curr_user = firebase.auth().currentUser
+  //     this.first_name = db.collections('Users').get
+  //   },
+  // }
 };
 </script>
 <style lang="scss" scoped>
