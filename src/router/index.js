@@ -4,6 +4,7 @@ import master from '@/components/master'
 import signin from '@/components/signin'
 import dashboard from '@/components/dashboard'
 import signup from '@/components/signup'
+import home from '@/components/home'
 import firebase from 'firebase'
 
 Vue.use(Router)
@@ -38,6 +39,11 @@ const router = new Router({
       path: '/signup',
       name: 'signup',
       component: signup
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: home
     }
   ]
 })
