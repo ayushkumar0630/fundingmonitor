@@ -1,73 +1,33 @@
 <template>
   <div class="dashboard">
-    <div class="header">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="title">
-              <span>Investors</span>
-              <span class="icon-title"></span>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="functions clearfix">
-              <input type="button" class="btn-add float-right" value="Add Investor">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sub-header">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="row">
-          <div class="col-md-6">
-            <div class="grid-options">
-              <span class="option-1"></span>
-              <span class="option-2"></span>
-              <span class="option-search">
-                <input type="text" name="Search field values" id class="txt-search">
-              </span>
-            </div>
-            </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="content float-right">
-              <div class="row-count">28 Investors</div>
-              <div class="filter">
-                <span class="filter-icon"></span>
-                <span class="filter-label">Filters</span>
+    <div class="container-fluid">
+      <diw class="row">
+        <div class=" left-menu-wrapper">
+          <div class="account-nav clearfix">
+            <div class="profile">
+              <div class="image-container">
+              <div class="img" style="background-image:url('/static/img/Ayush.206ac7e.jpg')">
+              </div>
+              </div>
+              <div class="name">
+                Ayush Kumar
               </div>
             </div>
           </div>
+
+          <div class="dashboard-nav">
+            <div class="navigation-set">
+              <ul class="navs">
+                <li><span>Investers</span><span class="arrow"></span></li>
+                <li><span>Employees</span><span class="arrow"></span></li>
+                <li><span>Statistics</span><span class="arrow"></span></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class=" dash-container">dashboard</div>
+      </diw>
     </div>
-    <table class="data-grid striped">
-      <thead>
-        <tr>
-          <th width="20px">
-              <input type="checkbox" class="chk">
-              <span></span>
-          </th>
-          <th>Company</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Title</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(user, index) in users" :key="index">
-          <td>{{ index }}</td>
-          <td>{{ user.company }}</td>
-          <td>{{ user.firstname }}</td>
-          <td>{{ user.lastname }}</td>
-          <td>{{ user.title }}</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 </template>
 
@@ -79,27 +39,10 @@ export default {
   name: "home",
   data() {
     return {
-      users: []
     };
   },
   created: function() {
-    //   return {
-    //       users: db.collection('Users')
-    //   }
-    db.collection("Users")
-      .get()
-      .then(snapshot => {
-        snapshot.forEach(doc => {
-          //  console.log(doc.id, " => ", doc.data())
-          let user = doc.data();
-          user.id = doc.id;
-          this.users.push(user);
-          //  console.log(user)
-        });
-      })
-      .catch(error => {
-        console.log("Error getting documents: ", error);
-      });
+  
   }
 };
 </script>
@@ -107,139 +50,107 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/common.scss";
 .dashboard {
-  .header {
-    padding: 10px 0;
+   flex-grow : 1;
+   .container-fluid{
+     height: 100%;
+    padding: 0px;
 
-    .container-fluid {
-      .row {
-        margin-bottom: 0px;
-      }
-    }
+     .row{
+       height:100%; 
+       display: flex;
+       width: 100%;;
+    padding: 0px;
+    margin: 0px;
+     }
+   }
+  .left-menu-wrapper{
+    background-color:#f88744;    
+    color: #FFFFFF;    
+    width: 236px;
+    .account-nav{
+      .profile{
+        .image-container{
+          display: block;
+          float: left;
 
-    .title {
-      font-size: 20px;
-      color: #fead41;
-      line-height: 40px;
-
-      span {
-        display: inline-block;
-        vertical-align: middle;
-      }
-    }
-
-    .icon-title {
-      width: 24px;
-      height: 24px;
-      background-image: url("../assets/icon-title.svg");
-      background-repeat: no-repeat;
-      margin-left: 10px;
-    }
-
-    .btn-add {
-      background-color: #fead41;
-      padding: 10px 20px;
-      border-radius: 4px;
-      font-weight: normal;
-      border: 1px solid #333;
-      border: none;
-      border-bottom: 3px solid #da8413;
-      color: #ffffff;
-      outline: none;
-    }
-  }
-
-  .sub-header {
-    .row {
-      margin-bottom: 0px;
-    }
-    .row-count {
-      font-size: 14px;
-      color: #8f8f8f;
-      display: inline-block;
-      margin-top: 8px;
-    }
-
-    .filter {
-      display: inline-block;
-      margin-top: 8px;
-      margin-left: 4px;
-      span {
-        display: inline-block;
-        vertical-align: middle;
-
-        &.filter-icon {
-          width: 20px;
-          height: 20px;
-          margin-right: 4px;
-          background-image: url("../assets/icon-filter.svg");
-          background-repeat: no-repeat;
-        }
-      }
-    }
-
-    .txt-search {
-      width: 100%;
-      background-image: url("../assets/icon-search.svg");
-      background-repeat: no-repeat;
-      background-position: right 12px top 6px;
-      padding-right: 40px;
-      padding: 8px;
-      border-radius: 3px;
-      border: 1px solid #a6b4c2;
-      border-radius: 4px;
-    }
-  }
-}
-
-.data-grid {
-      width: 100%;
-    margin-top: 10px;
-  thead {
-    tr {
-      th {
-        background-color: #f3f3f1;
-        border-radius: 0px;
-        border: 1px solid #e6e6e5;
-        color: #6c7b88;
-        padding: 2px 10px;
-
-        &:first-child {
-          text-align: center;
-
-          label {
-            span {
-              padding: 0;
-              width: 20px;
-              display: inline-block;
-              margin-top: 9px;
-              height: 20px;
-              vertical-align: bottom;
-            }
+          .img{            
+            width: 50px;
+            height: 50px;
+            border: 3px solid #fff;
+            box-shadow: 0px 0px 10px #d65000;
+            border-radius: 100px;
+            background-size: cover;
+            margin-left: 10px;
+            margin-top: 10px;
           }
         }
-      }
-    }
-  }
-  tbody {
-    tr {
-      td {
-        // background-color: #f3f3f1;
-        border-radius: 0px;
-        border: 1px solid #e6e6e5;
-        color: #6c7b88;
-        padding: 6px 10px;
-
-        &:first-child {
-          text-align: center;
+        .name{
+          display:block;
+          float: left;
+          padding-top: 20px;
+          padding-left: 10px;
+          font-weight: 500;
         }
       }
-
-      //   &:nth-child(odd) {
-      //     td {
-      //       background: #ddd;
-      //     }
-      //   }
     }
+
+
+    .dashboard-nav{
+      .navigation-set{
+            padding: 0 10px;
+    margin-top: 50%;
+      .navs{
+        display:block;
+        padding-left:0px;
+        li{
+          list-style-type: none;
+          position: relative;
+          font-size: 18px;    
+          margin: 8px 0;
+span.arrow {
+	width: 16px;
+  height: 16px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 10px;
+  top: 9px;
+	transform: rotate(45deg);
+	
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		border-width: 4px 4px 0 0;
+		border-style: solid;
+		border-color: #fafafa;
+		transition: .2s ease;
+		display: block;
+		transform-origin: 100% 0;
+	}
+
+	
+	&:after {
+		content: '';
+		float: left;
+		position: relative;
+		top: -100%;
+		width: 100%;
+		height: 100%;
+		border-width: 0 4px 0 0;
+		border-style: solid;
+		border-color: #fafafa;
+		transform-origin: 100% 0;
+		transition:.2s ease;
+	}
+
+	
+}
+        }
+      }}}
+
+  }
+  .dash-container{
+    flex: 1;
   }
 }
 </style>
