@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="nav-dash">
       <section class="section-nav">
       <div class="container-fluid">
         <div class="row">
      <b-navbar toggleable="lg" type="light" variant="info" class="nav-wrapper">
-    <b-navbar-brand href="#">
+    <b-navbar-brand href="#" class="brand">
       <router-link :to="{ name: 'master'}" class="brand-logo">
        <a>
           <img src="../assets/fundingmonitor.svg" alt width="40px">
@@ -75,7 +75,12 @@ nav{
    width: 100%;
 }
 .nav-wrapper {
+padding: 0px;
 
+.brand{
+  padding:10px;
+  width:236px;
+  margin-right: 0px;
   .brand-logo {
     img {
       display: block;
@@ -92,7 +97,7 @@ nav{
     color: #6e6e6e ;
     }
   }
-
+}
   
 }
 .sub-nav{

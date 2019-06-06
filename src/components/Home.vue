@@ -23,6 +23,15 @@
                 <li><span>Statistics</span><span class="arrow"></span></li>
               </ul>
             </div>
+
+            <div class="footer-nav">
+              <div class="footer-nav-list">
+                <ul class="navs">
+                  <li class="clearfix"><span class="icon"><img src="../assets/home-icon.png" alt=""></span><span class="nav-label">Home</span></li>
+                  <li class="clearfix"><span class="icon"><img src="../assets/settings-icon.png" alt=""></span><span class="nav-label">Settings</span></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class=" dash-container">dashboard</div>
@@ -67,6 +76,7 @@ export default {
     background-color:#f88744;    
     color: #FFFFFF;    
     width: 236px;
+    position: relative;
     .account-nav{
       .profile{
         .image-container{
@@ -105,11 +115,12 @@ export default {
         li{
           list-style-type: none;
           position: relative;
-          font-size: 18px;    
+          font-size: 16px;    
           margin: 8px 0;
+          cursor: pointer;
 span.arrow {
-	width: 16px;
-  height: 16px;
+	width: 10px;
+  height: 10px;
 	box-sizing: border-box;
 	position: absolute;
 	right: 10px;
@@ -120,7 +131,7 @@ span.arrow {
 		content: '';
 		width: 100%;
 		height: 100%;
-		border-width: 4px 4px 0 0;
+		border-width: 2px 2px 0 0;
 		border-style: solid;
 		border-color: #fafafa;
 		transition: .2s ease;
@@ -136,7 +147,7 @@ span.arrow {
 		top: -100%;
 		width: 100%;
 		height: 100%;
-		border-width: 0 4px 0 0;
+		border-width: 0 2px 0 0;
 		border-style: solid;
 		border-color: #fafafa;
 		transform-origin: 100% 0;
@@ -147,6 +158,33 @@ span.arrow {
 }
         }
       }}}
+
+     .footer-nav{
+       position: absolute;
+       bottom: 0;
+     .footer-nav-list{
+       padding: 10px;
+     .navs{
+       padding-left: 0px;
+       margin-bottom: 0px;
+       li{ 
+         list-style-type:none;
+         padding:6px 0;
+         cursor: pointer;
+
+     .icon{ 
+       img{
+         width: 26px; 
+         } 
+       display: block;
+       float: left;}
+     .nav-label{
+       margin-left: 10px;
+       display: block;
+       float: left;
+       line-height: 30px;
+     }
+     }}}}
 
   }
   .dash-container{
