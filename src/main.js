@@ -6,8 +6,11 @@ import router from './router'
 
 import BootstrapVue from 'bootstrap-vue'
 
+import VueApexCharts from 'vue-apexcharts'
 Vue.use(BootstrapVue)
 
+
+Vue.component('apexchart', VueApexCharts)
 const fb = require('./firebaseconf.js')
 
 Vue.config.productionTip = false
