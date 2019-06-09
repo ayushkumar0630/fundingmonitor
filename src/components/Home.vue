@@ -1,93 +1,60 @@
 <template>
   <div class="dashboard">
     <div class="container-fluid">
-      <diw class="row">
-        <div class=" left-menu-wrapper">
-          <div class="account-nav clearfix">
-            <div class="profile">
-              <div class="image-container">
-              <div class="img" style="background-image:url('/static/img/Ayush.206ac7e.jpg')">
-              </div>
-              </div>
-              <div class="name">
-                Ayush Kumar
-              </div>
+      <div class="row">
+        <side-nav></side-nav>
+        <div class=" dash-container">
+          
+          <div class="row">
+            <div class="col-md-4">
+              <div class="number-label">Goal</div>
+              <div class="number">1,000,000</div>
             </div>
-          </div>
-
-          <div class="dashboard-nav">
-            <div class="navigation-set">
-              <ul class="navs">
-                <li><span>Investers</span><span class="arrow"></span></li>
-                <li><span>Employees</span><span class="arrow"></span></li>
-                <li><span>Statistics</span><span class="arrow"></span></li>
-              </ul>
+            <div class="col-md-4">
+              <div class="pie-chart"><apexchart type=pie width=380 :options="chartOptions" :series="series" /></div>
             </div>
-
-            <div class="footer-nav">
-              <div class="footer-nav-list">
-                <ul class="navs">
-                  <li class="clearfix"><span class="icon"><img src="../assets/home-icon.png" alt=""></span><span class="nav-label">Home</span></li>
-                  <li class="clearfix"><span class="icon"><img src="../assets/settings-icon.png" alt=""></span><span class="nav-label">Settings</span></li>
-                </ul>
-              </div>
+            <div class="col-md-4">
+              
+              <div class="number-label">Raised</div>
+              <div class="number">500,000</div>
             </div>
           </div>
         </div>
-        <div class=" dash-container">dashboard
-
-         <apexchart type=line height=350 :options="chartOptions" :series="series" />
-        </div>
-      </diw>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 /* eslint-disable */
+
+import Sidenav from './Sidenav.vue'
 import { db } from "@/firebaseconf.js";
 export default {
   name: "home",
   data() {
     return {
-      series: [{
-          name: 'Website Blog',
-          type: 'column',
-          data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
-        }, {
-          name: 'Social Media',
-          type: 'line',
-          data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16]
-        }],
+      series: [40, 60],
         chartOptions: {
-          stroke: {
-            width: [0, 4]
-          },
-          title: {
-            text: 'Traffic Sources'
-          },
-          // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-          labels: ['01 Jan 2001', '02 Jan 2001', '03 Jan 2001', '04 Jan 2001', '05 Jan 2001', '06 Jan 2001',
-            '07 Jan 2001', '08 Jan 2001', '09 Jan 2001', '10 Jan 2001', '11 Jan 2001', '12 Jan 2001'
-          ],
-          xaxis: {
-            type: 'datetime'
-          },
-          yaxis: [{
-            title: {
-              text: 'Website Blog',
-            },
-
-          }, {
-            opposite: true,
-            title: {
-              text: 'Social Media'
+          labels: ['Raised', 'Goal'],
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200
+              },
+              legend: {
+                position: 'bottom'
+              }
             }
           }]
         }
       
     };
   },
+        components:{
+          sideNav:Sidenav
+        },
   created: function() {
   
   }
@@ -110,123 +77,31 @@ export default {
     margin: 0px;
      }
    }
-  .left-menu-wrapper{
-    background-color:#f88744;    
-    color: #FFFFFF;    
-    width: 236px;
-    position: relative;
-    .account-nav{
-      .profile{
-        .image-container{
-          display: block;
-          float: left;
-
-          .img{            
-            width: 50px;
-            height: 50px;
-            border: 3px solid #fff;
-            box-shadow: 0px 0px 10px #d65000;
-            border-radius: 100px;
-            background-size: cover;
-            margin-left: 10px;
-            margin-top: 10px;
-          }
-        }
-        .name{
-          display:block;
-          float: left;
-          padding-top: 20px;
-          padding-left: 10px;
-          font-weight: 500; 
-        }
-      }
-    }
-
-
-    .dashboard-nav{
-      .navigation-set{
-            padding: 0 10px;
-    margin-top: 50%;
-      .navs{
-        display:block;
-        padding-left:0px;
-        li{
-          list-style-type: none;
-          position: relative;
-          font-size: 16px;    
-          margin: 8px 0;
-          cursor: pointer;
-span.arrow {
-	width: 10px;
-  height: 10px;
-	box-sizing: border-box;
-	position: absolute;
-	right: 10px;
-  top: 9px;
-	transform: rotate(45deg);
-	
-	&::before {
-		content: '';
-		width: 100%;
-		height: 100%;
-		border-width: 2px 2px 0 0;
-		border-style: solid;
-		border-color: #fafafa;
-		transition: .2s ease;
-		display: block;
-		transform-origin: 100% 0;
-	}
-
-	
-	&:after {
-		content: '';
-		float: left;
-		position: relative;
-		top: -100%;
-		width: 100%;
-		height: 100%;
-		border-width: 0 2px 0 0;
-		border-style: solid;
-		border-color: #fafafa;
-		transform-origin: 100% 0;
-		transition:.2s ease;
-	}
-
-	
-}
-        }
-      }}}
-
-     .footer-nav{
-       position: absolute;
-       bottom: 0;
-     .footer-nav-list{
-       padding: 10px;
-     .navs{
-       padding-left: 0px;
-       margin-bottom: 0px;
-       li{ 
-         list-style-type:none;
-         padding:6px 0;
-         cursor: pointer;
-
-     .icon{ 
-       img{
-         width: 26px; 
-         } 
-       display: block;
-       float: left;}
-     .nav-label{
-       margin-left: 10px;
-       display: block;
-       float: left;
-       line-height: 30px;
-     }
-     }}}}
-
-  }
+  
   .dash-container{
     flex: 1;
+
+    .number-label{
+      text-align: center;
+          font-size: 42px;
+    font-weight: 600;
+    line-height: 54px;
+    color: #5a5a5a;
+    margin-top:60px;
+    }
+
+    .number{
+      text-align: center;
+          font-size: 42px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #808080;
+    }
+
+    .pie-chart{
+          width: fit-content;
+    margin: 0 auto;
+    }
   }
 }
 </style>
