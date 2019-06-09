@@ -137,7 +137,7 @@ export default {
           float: left;
           padding-top: 20px;
           padding-left: 10px;
-          font-weight: 500;
+          font-weight: 500; 
         }
       }
     }
