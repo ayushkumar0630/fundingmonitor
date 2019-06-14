@@ -44,7 +44,8 @@ export default {
     background-color:#f88744;    
     color: #FFFFFF;    
     width: 236px;
-    position: relative;
+        position: absolute;
+    height: 100%;
     .account-nav{
       .profile{
         .image-container{

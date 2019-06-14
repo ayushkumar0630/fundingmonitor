@@ -140,6 +140,5 @@ padding: 0px;
 }
 
 .nav-dash{
-  
 }
 </style>
