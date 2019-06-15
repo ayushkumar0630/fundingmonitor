@@ -1,10 +1,9 @@
 <template>
   <div class="dashboard">
-    <div class="container-fluid">
-      <div class="row">
+    <div class="side-nav-container">
         <side-nav></side-nav>
-        <div class=" dash-container">
-          
+       </div> <div class=" dash-container">
+          <div class="container-fluid">
           <div class="row">
             <div class="col-md-4">
               <div class="number-label">Goal</div>
@@ -68,10 +67,8 @@
           </div>
   </div>
 </div>
-         
+         </div>
         </div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -124,23 +121,22 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/common.scss";
 .dashboard {
-   flex-grow : 1;
-   .container-fluid{
-     height: 100%;
-    padding: 0px;
+  position: relative;
+  width: 100%;
+  height: 100%;
 
-     .row{
-       height:100%; 
-       display: -webkit-box;
-       width: 100%;;
-    padding: 0px;
-    margin: 0px;
-     }
-   }
+.side-nav-container{
+    position: absolute;
+        left: 0;
+        width:236px;
+        height: 100%;
+}
   
-  .dash-container{
-    flex: 1;
-
+  .dash-container{  
+        position: absolute;
+        left: 236px;        
+        width: calc(100% - 236px);
+        height: 100%;
     .number-label{
       text-align: center;
           font-size: 42px;
