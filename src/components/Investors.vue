@@ -1,8 +1,8 @@
 <template>
  <div class="dashboard">
-    <div class="side-nav-container">
+    <div class="side-nav-container" v-bind:class="{'on-pop':this.isModalOpen}">
         <side-nav></side-nav>
-       </div> <div class=" dash-container">
+       </div> <div class=" dash-container"  v-bind:class="{'on-pop':this.isModalOpen}">
          
 
                 <div class="list-header clearfix">
@@ -117,20 +117,26 @@
 
                       
                     </div>
-                     <transition name="fade">
+                    
+                  </div>
+                </div>
+        </div>
+
+ <transition name="fade">
                     <div class="popup-modal"  v-if="isModalOpen">
                      
                       <div class="modal-overlay">
-                      <div class="modal-overlay-fixed"  v-on:click="isModalOpen=false">
+                      <div class="modal-overlay-fixed"  v-on:click="this.closeModal">
 
                       </div>
                       </div>
-                      
-                      <div class="modal-container">
+                       <transition name="slide-fade">
+                      <div class="modal-container" v-if="isPopUpOpen">
                         <div class="modal-box">
                           <div class="modal-header">
+                            <div class="modal-title">Add Investor</div>
                             <div class="modal-close">
-                              <div class="modal-close-btn" v-on:click="isModalOpen=false"></div>
+                              <div class="modal-close-btn" v-on:click="closeModal"></div>
                             </div>
                           </div>
                           <div class="modal-body">
@@ -172,13 +178,9 @@
                           </div>
                         </div>
                       </div>
+                       </transition>
                     </div>
                   </transition>
-                  </div>
-                </div>
-        </div>
-
-
   </div>
 </template>
 
@@ -216,18 +218,34 @@ export default {
           categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
         }
       },
-      isModalOpen:false
+      isModalOpen:false,
+      isPopUpOpen:false
     };
   },
         components:{
           sideNav:Sidenav
         },
-  created: function() {
+  created: function() { 
   
+      this.$emit("setDashStyle",true);
   },
   methods:{
     openModal:function(){
       this.isModalOpen=true;
+      this.$emit("isBlur",this.isModalOpen);
+      let self=this;
+      setTimeout(function(){
+      self.isPopUpOpen=true;
+      },50);
+      
+    },
+    closeModal:function(){          
+      this.isPopUpOpen=false;
+      let self=this;
+      setTimeout(function(){
+        self.isModalOpen=false;        
+        self.$emit("isBlur",self.isModalOpen); 
+      },100);
     }
   }
 };
@@ -254,12 +272,12 @@ export default {
         height: 100%;
 .list-header{
   width: 100%;
-  height: 80px;
+  height: 66px;
 }
     .list-container{
       position:absolute;
       width:100%;
-      height: calc(100% - 80px);
+      height: calc(100% - 66px);
       padding: 10px;
 
       .list-container-inner{
@@ -273,20 +291,20 @@ export default {
     position: fixed;
     bottom: 24px;
     right: 44px;
-    width: 66px;
-  height:66px;
+    width: 54px;
+  height:54px;
   border-radius: 100%;
-  background-image: linear-gradient(to right bottom, #fb6912, #fc610c, #fd5806, #fe4e02, #ff4300);
-  box-shadow: 0px 0px 10px #fc610c;
+  background-image: linear-gradient(to right top, #fe6d56, #fe7a4c, #fc8742, #f89539, #f2a233);
+  box-shadow: 0px 0px 8px #ffc1a9;
 input[type='button']{
   border:none;
-  width: 66px;
-  height:66px;
+  width: 54px;
+  height:54px;
   cursor: pointer;
   background-image: url('../assets/icon-add-user.png');   
    background-color: transparent;
     background-repeat: no-repeat;
-    background-size: 54%;
+    background-size: 42%;
     background-position: center;
   border-radius: 100%;
   outline:none;
@@ -306,6 +324,89 @@ input[type='button']{
           }
         }
 
+      }
+    }
+    .list-header{
+      .header-col-6{
+        width: 50%;
+        float: left;
+
+        .header-title{
+              padding: 18px 10px 10px 10px;
+          font-size: 26px;
+          color: #fe6d56;
+          font-weight: 600;
+        }
+        .header-search{
+           padding-top: 9px;
+           width: 360px;
+           float: right;
+          .search-box-container{
+                padding: 10px;
+                  width: 300px;
+                float: left;
+            position: relative;
+            .search-icon{
+              width: 24px;
+              height: 24px;
+              background-image: url('../assets/icon-search.png');
+              background-repeat: no-repeat;
+background-size: 80%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 19px;
+    left: 22px;
+    z-index: 1;
+            }
+            .search-box{
+                  position: relative;
+    width: 100%;
+    padding: 6px;
+    border: none;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    padding-left: 40px;
+    border-radius: 4px;
+              &:focus{
+                box-shadow: 0px 0px 3px #f88744;
+    border-color: #f88744;
+    outline: none;
+              }
+            }
+          }
+          .filter-container{
+float: left;
+    padding: 10px 0;
+    width: 10%;
+.btn-filter{
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border:none;
+  margin-top:4px;
+  margin-left: 4px;
+  background-image:url('../assets/filter-search-filter.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+          }
+        }
+
+
+        
+      }
+    }
+
+
+  }
+
+
+.on-pop{
+      -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+
+
         .popup-modal{
           position:absolute;
           width:100%;
@@ -313,10 +414,11 @@ input[type='button']{
           top:0;
         .modal-overlay{
         
-          position: absolute;
+          position: fixed;
+          top:0;
           width:100%;
           height: 100%;
-          background-color: rgba(0, 0, 0, 0.2);
+          background-color: rgba(0, 0, 0, 0.05);
           z-index: 1;
           .modal-overlay-fixed{
             position:fixed;
@@ -328,20 +430,28 @@ input[type='button']{
         .modal-container{
           position: fixed;
           margin: auto;
-      top: 18%; left: 0; bottom: 0; right: 0;
-          width: 50%;
+      top: 0; left: 0; bottom: 0; right: 0;
+          width: 34%;
               height: fit-content;
-    border-radius: 4px;
-    box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.25);
+    border-radius: 6px;
+    box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.5);
     
           background-color: #ffffff;    z-index: 2;
         .modal-box{
 .modal-header{
+      padding: 10px 15px;
+  .modal-title{
+    font-size: 20px;
+    color: #ff6b13;
+    font-weight: 600;
+
+  }
 .modal-close{
-  width:100%;
+ 
 .modal-close-btn{
-  width: 40px;
-  height: 40px;
+      width: 24px;
+    height: 24px;
+    margin-top: 3px;
   border-radius: 100%;
   cursor: pointer;
   background-image: url('../assets/icon-close.png');
@@ -354,16 +464,18 @@ input[type='button']{
 }
 }
 .modal-body{
+    padding: 15px;
   .modal-body-container{
     .input-container{
-          padding: 10px 0;
+        
+        padding: 10px 0;
     width: 100%;
     
     input{
       border:none;
       border:1px solid #cecece;
       width: 100%;
-      padding:10px;
+      padding: 8px 10px; 
       border-radius: 3px;
 
       &:focus{
@@ -408,78 +520,6 @@ input[type='button']{
   }
 }
         }}
-      }
-    }
-    .list-header{
-      .header-col-6{
-        width: 50%;
-        float: left;
-
-        .header-title{
-          padding: 10px;
-          font-size: 40px;
-          color: #f88744;
-          font-weight: 600;
-        }
-        .header-search{
-          padding-top:10px;
-          .search-box-container{
-                padding: 10px;
-              width: 90%;
-                float: left;
-            position: relative;
-            .search-icon{
-              width: 30px;
-              height: 30px;
-              background-image: url('../assets/icon-search.png');
-              background-repeat: no-repeat;
-              position: absolute;
-              top:20px;
-              left:20px;
-              z-index: 1;
-            }
-            .search-box{
-              position: relative;
-              width: 100%;
-              padding:10px;
-              border:none;
-              border:1px solid #cccccc;
-              border-radius: 3px;
-              padding-left: 40px;
-              &:focus{
-                box-shadow: 0px 0px 3px #f88744;
-    border-color: #f88744;
-    outline: none;
-              }
-            }
-          }
-          .filter-container{
-float: left;
-    padding: 10px 0;
-    width: 10%;
-.btn-filter{
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border:none;
-  margin-top:4px;
-  margin-left: 4px;
-  background-image:url('../assets/icon-filter.png');
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-          }
-        }
-
-
-        
-      }
-    }
-
-
-  }
-
-
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -487,6 +527,49 @@ float: left;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  // transition: all .2s ease;
+  animation: bounce-in .1s;
+}
+.slide-fade-leave-active {
+  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  // transform: translateY(-20px);
+  animation: bounce-out .1s;
+  opacity: 0;
+}
+
+
+.bounce-transition {
+  display: inline-block; /* otherwise scale animation won't work */
+}
+.bounce-enter {
+  animation: bounce-in .1s;
+}
+.bounce-leave {
+  animation: bounce-out .1s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.98);
+  }
 }
 </style>
 

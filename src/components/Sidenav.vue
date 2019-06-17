@@ -41,6 +41,7 @@ export default {
 
 <style lang="scss">
 .left-menu-wrapper{
+  background-image: linear-gradient(to right top, #fe6d56, #fe7a4c, #fc8742, #f89539, #f2a233);
     background-color:#f88744;    
     color: #FFFFFF;    
     width: 236px;
@@ -55,8 +56,7 @@ export default {
           .img{            
             width: 50px;
             height: 50px;
-            border: 3px solid #fff;
-            box-shadow: 0px 0px 10px #d65000;
+            border: 2px solid #fff;
             border-radius: 100px;
             background-size: cover;
             margin-left: 10px;

@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row">
      <b-navbar toggleable="lg" type="light" variant="info" class="nav-wrapper">
-    <b-navbar-brand href="#" class="brand">
+    <b-navbar-brand href="#" class="brand" v-bind:class="{'isDashboard':isDashboard}">
       <router-link :to="{ name: 'master'}" class="brand-logo">
        <a>
           <img src="../assets/fundingmonitor.svg" alt width="40px">
@@ -15,7 +15,7 @@
 
     <b-navbar-toggle target="nav_collapse" />
 
-    <b-collapse is-nav id="nav_collapse">
+    <b-collapse is-nav id="nav_collapse" class="nav_collapse">
       <b-navbar-nav class="ml-auto">
 
        
@@ -48,6 +48,12 @@ export default {
       last_name: null
     };
   },
+  props:{
+    isDashboard:{
+      default:false,
+      type:Boolean
+    }
+  }
   // methods: {
   //   beforeCreate() {
   //     let curr_user = firebase.auth().currentUser
@@ -66,7 +72,7 @@ nav{
 
 .section-nav{  
       background-color: #ffffff !important;
-    border-bottom: 1px solid #eaeaea;    
+    // border-bottom: 1px solid #eaeaea;    
 }
 
 .bg-info{
@@ -80,7 +86,9 @@ padding: 0px;
 .brand{
   padding:10px;
   width:236px;
-  margin-right: 0px;
+  margin-right: 0px; 
+    height: 65px;
+    border-bottom: 1px solid #e4e4e4;
   .brand-logo {
     img {
       display: block;
@@ -98,7 +106,17 @@ padding: 0px;
     }
   }
 }
+.isDashboard{
   
+    background-color: #ffefe0;   
+    border-color:#ffc46b;
+} 
+
+.nav_collapse{
+    border-bottom: 1px solid #e4e4e4;
+    white-space: nowrap;
+    height: 65px;
+}
 }
 .sub-nav{
     li{
