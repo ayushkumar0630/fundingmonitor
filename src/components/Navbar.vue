@@ -116,6 +116,10 @@ padding: 0px;
     border-bottom: 1px solid #e4e4e4;
     white-space: nowrap;
     height: 65px;
+
+    .nav-item{
+      padding: 0 10px;
+    }
 }
 }
 .sub-nav{

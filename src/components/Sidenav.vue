@@ -15,9 +15,9 @@
           <div class="dashboard-nav">
             <div class="navigation-set">
               <ul class="navs">
-                <li><span>Investers</span><span class="arrow"></span></li>
-                <li><span>Employees</span><span class="arrow"></span></li>
-                <li><span>Statistics</span><span class="arrow"></span></li>
+                <li v-bind:class="{'active':currentPage=='investors'}" ><router-link to="/investors"><span>Investers</span><span class="arrow"></span></router-link></li>
+                <li v-bind:class="{'active':currentPage=='employees'}"><router-link to="/employees"><span>Employees</span><span class="arrow"></span></router-link></li>
+                <li v-bind:class="{'active':currentPage=='statistics'}"><router-link to="/statistics"><span>Statistics</span><span class="arrow"></span></router-link></li>
               </ul>
             </div>
 
@@ -35,7 +35,12 @@
 
 <script>
 export default {
-
+props:{
+  currentPage:{
+    default:"investors",
+    type:String
+  }
+}
 }
 </script>
 
@@ -86,27 +91,60 @@ export default {
           position: relative;
           font-size: 16px;    
           margin: 8px 0;
+          padding: 2px 10px;
           cursor: pointer;
-span.arrow {
-	width: 10px;
-  height: 10px;
-	box-sizing: border-box;
-	position: absolute;
-	right: 10px;
-  top: 9px;
-	transform: rotate(45deg);
-	
-	&::before {
-		content: '';
-		width: 100%;
-		height: 100%;
-		border-width: 2px 2px 0 0;
-		border-style: solid;
-		border-color: #fafafa;
-		transition: .2s ease;
-		display: block;
-		transform-origin: 100% 0;
-	}
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+
+          &.active{
+            -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+          padding: 2px 14px;
+          background-color: rgba(255, 255, 255, 0.2);
+          /* padding: 2px 14px; */
+          border-radius: 20px;
+          }
+          &:hover{            
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+          padding: 2px 14px;
+          background-color: rgba(255, 255, 255, 0.2);
+          /* padding: 2px 14px; */
+          border-radius: 20px;
+          span.arrow {       
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+	        // right: 18px;
+            }
+          }
+          a{
+            color: #ffffff;
+            text-decoration: none;
+          display: block;
+            &:hover{
+              text-decoration: none;
+            }
+          }
+          span.arrow {
+            width: 10px;
+            height: 10px;
+            box-sizing: border-box;
+            position: absolute;
+            right: 14px;
+            top: 10px;
+            transform: rotate(45deg);
+            
+            &::before {
+              content: '';
+              width: 100%;
+              height: 100%;
+              border-width: 2px 2px 0 0;
+              border-style: solid;
+              border-color: #fafafa;
+              transition: .2s ease;
+              display: block;
+              transform-origin: 100% 0;
+            }
 
 	
 	&:after {

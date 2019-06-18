@@ -6,6 +6,7 @@ import dashboard from '@/components/dashboard'
 import signup from '@/components/signup'
 import home from '@/components/home'
 import investors from '@/components/investors'
+import employees from '@/components/employees'
 import template from '@/components/template'
 import firebase from 'firebase'
 
@@ -51,6 +52,11 @@ const router = new Router({
       path: '/investors',
       name: 'investors',
       component: investors
+    },
+    {
+      path: '/employees',
+      name: 'employees',
+      component: employees
     },
     {
       path: '/template',

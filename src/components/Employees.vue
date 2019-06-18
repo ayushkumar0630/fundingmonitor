@@ -7,7 +7,7 @@
 
                 <div class="list-header clearfix">
 <div class="header-col-6">
-  <div class="header-title">Investors</div>
+  <div class="header-title">Employees</div>
 </div>
 <div class="header-col-6">
   <div class="header-search clearfix">
@@ -31,90 +31,18 @@
                     </div>
                     <div class="list-set">
                       <ul class="list-items">
-                        <li class="list-item">
+                        <li class="list-item" v-for="index in 18" v-bind:key="index">
                           <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                            <div class="item-details clearfix">
+                              <div class="item-pic">
+                                <div class="pic" style="background-image:url('/static/img/Ayush.206ac7e.jpg')"></div>
+                              </div>
+                              <div class="item-desc"> 
+                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                            </div>
                             </div>
                           </div>
-                        </li>
-                        <li class="list-item">
-                          <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-item">
-                          <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-item">
-                          <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-item">
-                          <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-item">
-                          <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-item">
-                          <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-item">
-                          <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-item">
-                          <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                            </div>
-                          </div>
-                        </li>
-                         <li class="list-item">
-                          <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                            </div>
-                          </div>
-                        </li>
-                         <li class="list-item">
-                          <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                            </div>
-                          </div>
-                        </li>
-                         <li class="list-item">
-                          <div class="item-container">
-                            <div class="item-details">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                            </div>
-                          </div>
-                        </li>
+                        </li>                        
                       </ul>
 
                       
@@ -136,7 +64,7 @@
                       <div class="modal-container" v-if="isPopUpOpen">
                         <div class="modal-box">
                           <div class="modal-header">
-                            <div class="modal-title">Add Investor</div>
+                            <div class="modal-title">Add Employee</div>
                             <div class="modal-close">
                               <div class="modal-close-btn" v-on:click="closeModal"></div>
                             </div>
@@ -144,10 +72,15 @@
                           <div class="modal-body">
 <div class="modal-body-container">
   <div class="input-container">
-    <input type="text" name="" id="" class="input-box" placeholder="Investor Name">
+    <div class="profile">
+      <div class="profile-pic" style="background-image:url('/static/img/Ayush.206ac7e.jpg')"></div>
+    </div>
+  </div>
+  <div class="input-container">
+    <input type="text" name="" id="" class="input-box" placeholder="Employee Name">
   </div>
     <div class="input-container">
-    <input type="text" name="" id="" class="input-box" placeholder="Contact Name">
+    <input type="text" name="" id="" class="input-box" placeholder="Role">
   </div>
     <div class="input-container">
     <input type="text" name="" id="" class="input-box" placeholder="Contact Email">
@@ -166,12 +99,6 @@
     <input type="text" name="" id="" class="input-box" placeholder="City">
       </div>
       </div>
-  </div>
-     <div class="input-container">
-    <input type="text" name="" id="" class="input-box" placeholder="Money Pledge">
-  </div>
-     <div class="input-container">
-    <input type="text" name="" id="" class="input-box" placeholder="Money Expected">
   </div>
   <div class="button-container">
     <input type="button" value="Save" class="btn-save">
@@ -193,10 +120,10 @@ import Sidenav from './Sidenav.vue'
 import { db } from "@/firebaseconf.js";
 import vueCustomScrollbar from 'vue-custom-scrollbar'
 export default {
-  name: "investors",
+  name: "employees",
   data() {
     return {
-      curentPageName:"investors",
+      curentPageName:"employees",
       series: [40, 60],
         chartOptions: {
           labels: ['Raised', 'Goal'],
@@ -336,9 +263,28 @@ input[type='button']{
                 padding:10px;
                 border-bottom: 1px solid #dedede;
                 .item-details{
-                  p{
+                  .item-pic{
+                    width: 80px;
+                    float: left;
+                    .pic{
+                      width:60px;
+                      height: 60px;
+                      border-radius: 70px;
+                      background-position: center;
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                      margin:10px;
+                    }
+                  }
+                  .item-desc{
+                    width:calc(100% - 90px);
+                    float: left;
+                     p{
+                       padding: 10px;
                     margin-bottom: 0px;
                   }
+                  }
+                 
                 }
               }
             }
@@ -491,8 +437,21 @@ float: left;
     .input-container{
         
         padding: 10px 0;
-    width: 100%;
-    
+    width: 100%;    
+
+    .profile{
+      .profile-pic{
+          width: 100px;
+          height: 100px;
+          border: 4px solid #ffa169;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          border-radius: 100px;
+          margin: 0 auto;
+      }
+      }
+
     input{
       border:none;
       border:1px solid #cecece;
