@@ -4,7 +4,7 @@ import master from '@/components/master'
 import signin from '@/components/signin'
 import dashboard from '@/components/dashboard'
 import signup from '@/components/signup'
-import home from '@/components/home'
+import statistics from '@/components/statistics'
 import investors from '@/components/investors'
 import employees from '@/components/employees'
 import template from '@/components/template'
@@ -44,9 +44,9 @@ const router = new Router({
       component: signup
     },
     {
-      path: '/home',
-      name: 'home',
-      component: home
+      path: '/statistics',
+      name: 'statistics',
+      component: statistics
     },
     {
       path: '/investors',

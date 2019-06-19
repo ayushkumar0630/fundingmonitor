@@ -1,16 +1,19 @@
 <template>
   <div class="dashboard">
     <div class="side-nav-container">
-        <side-nav></side-nav>
+        <side-nav :currentPage="curentPageName"></side-nav>
        </div> <div class=" dash-container">
-          <div class="container-fluid">
+
+         <div class="section-1">
+
+            <div class="container-fluid">
           <div class="row">
             <div class="col-md-4">
               <div class="number-label">Goal</div>
               <div class="number">1,000,000</div>
             </div>
             <div class="col-md-4">
-              <div class="pie-chart"><apexchart type=pie width=380 :options="chartOptions" :series="series" /></div>
+              <div class="pie-chart"><apexchart type=pie width=360 height=100% :options="chartOptions" :series="series" /></div>
             </div>
             <div class="col-md-4">
               
@@ -18,13 +21,18 @@
               <div class="number">500,000</div>
             </div>
           </div>
-          <div class="row-3">
+            </div>
+         </div>
+         <div class="section-2">
+           <div class="row-3">
   <div class="section-title">Follow Up Needed</div>
   <div class="section-content">
+    
+            <div class="container-fluid">
      <div class="row">
             <div class="col-md-6">
               <div class="box graph-box pull-left">
-                <apexchart type=bar width=380 :options="chartOptions" :series="seriesBar" /></div>
+                <apexchart type=bar width=100% :options="chartOptions" :series="seriesBar" /></div>
                 <div class="box desc-box pull-left">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
               </div>
@@ -40,35 +48,44 @@
               </div>
               </div>
           </div>
-  </div>
-</div>
-
-<div class="row-3">
-  <div class="section-title">Statistics</div>
-  <div class="section-content">
-     <div class="row">
-            <div class="col-md-6">
-              <div class="box graph-box pull-left">
-                <apexchart type=bar width=380 :options="chartOptions" :series="seriesBar" /></div>
-                <div class="box desc-box pull-left">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-              </div>
-              </div>
-             <div class="col-md-6">
-              <div class="box graph-box pull-left">
-                <div class="img">
-                  <img src="../assets/globe.png" alt="">
-                </div>
-                </div>
-                <div class="box desc-box pull-left">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-              </div>
-              </div>
           </div>
   </div>
 </div>
          </div>
-        </div>
+         <div class="section-3">
+
+           
+<div class="row-3">
+  <div class="section-title">Statistics</div>
+  <div class="section-content">
+            <div class="container-fluid">
+     <div class="row">
+            <div class="col-md-6">
+              <div class="box graph-box pull-left">
+                <apexchart type=bar width=100% :options="chartOptions" :series="seriesBar" /></div>
+                <div class="box desc-box pull-left">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+              </div>
+              </div>
+             <div class="col-md-6">
+              <div class="box graph-box pull-left">
+                <div class="img">
+                  <img src="../assets/globe.png" alt="">
+                </div>
+                </div>
+                <div class="box desc-box pull-left">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+              </div>
+              </div>
+          </div>
+          </div>
+  </div>
+</div>
+         </div>
+         
+          
+
+         </div>
   </div>
 </template>
 
@@ -78,9 +95,10 @@
 import Sidenav from './Sidenav.vue'
 import { db } from "@/firebaseconf.js";
 export default {
-  name: "home",
+  name: "statistics",
   data() {
     return {
+      curentPageName:"statistics",
       series: [40, 60],
         chartOptions: {
           labels: ['Raised', 'Goal'],
@@ -88,7 +106,7 @@ export default {
             breakpoint: 480,
             options: {
               chart: {
-                width: 200
+                width: 100
               },
               legend: {
                 position: 'bottom'
@@ -112,8 +130,8 @@ export default {
         components:{
           sideNav:Sidenav
         },
-  created: function() {
-  
+  created: function() {   
+      this.$emit("setDashStyle",true);
   }
 };
 </script>
@@ -137,6 +155,10 @@ export default {
         left: 236px;        
         width: calc(100% - 236px);
         height: 100%;
+
+        .section-1,.section-2,.section-3{
+          position:relative;height: 33.33%;
+        }
     .number-label{
       text-align: center;
           font-size: 42px;
