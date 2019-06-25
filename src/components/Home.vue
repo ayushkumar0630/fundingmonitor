@@ -4,26 +4,109 @@
         <side-nav :currentPage="curentPageName"></side-nav>
        </div> <div class=" dash-container">
 
-     <div class="list-header clearfix">
-<div class="header-col-6">
-  <div class="header-title">Statistics</div>
-</div>
-<div class="header-col-6">
-  <div class="header-search clearfix">
-    <div class="search-box-container">
-      <div class="search-icon"></div>
-     <input  class="search-box" type="text" name="" id="" placeholder="Search">
-    </div>
-    <div class="filter-container">
-      <input type="button" class="btn-filter" value="">
+<div class="s-row section-100 no-header">
+  <div class="col-100">
+    <div class="col-container">
+      <div class="pie-graph-box">
+        <div class="box clearfix">
+          <div class="col-detail">
+            <div class="detail">
+               <div class="number-label">Goal</div>
+              <div class="number">1,000,000</div>
+            </div>
+          </div>
+          <div class="col-graph">
+            <div class="graph"><apexchart type=pie width=360px height=100% :options="chartOptions" :series="series" /></div>
+          </div>
+          <div class="col-detail">
+            <div class="detail">
+               <div class="number-label">Goal</div>
+              <div class="number">1,000,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+<div class="s-row section-100">
+  <div class="section-header">   
+    <div class="section-title">Follow up needed</div>
+  </div>
+  <div class="col-100">
+    <div class="col-container">
+      <div class="slider-box">
+        <div class="slider-window">
+           <vue-custom-scrollbar class="scroll-area" :settings="settings">
+          <ul class="slider">
+            <li>
+              <div class="slide">
+                <div class="slide-item">
+                  <div class="item-title">Title</div>
+                  <div class="item-description">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  </div>
                 </div>
-                <div class="list-container">
-                  <div class="list-container-inner">
-                    <vue-custom-scrollbar class="scroll-area" :settings="settings">
+              </div>
+            </li>
+            <li>
+              <div class="slide">
+                <div class="slide-item">
+                  <div class="item-title">Title</div>
+                  <div class="item-description">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="slide">
+                <div class="slide-item">
+                  <div class="item-title">Title</div>
+                  <div class="item-description">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="slide">
+                <div class="slide-item">
+                  <div class="item-title">Title</div>
+                  <div class="item-description">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="slide">
+                <div class="slide-item">
+                  <div class="item-title">Title</div>
+                  <div class="item-description">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="slide">
+                <div class="slide-item">
+                  <div class="item-title">Title</div>
+                  <div class="item-description">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+           </vue-custom-scrollbar>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="s-row section-50 clearfix">
   <div class="section-header">    
     <div class="section-title">Statistics</div>
@@ -71,10 +154,7 @@
       </div>
   </div>
 </div>
-                    </vue-custom-scrollbar>
          </div>
-  </div>
-  </div>
   </div>
 </template>
 
@@ -85,10 +165,10 @@ import Sidenav from './Sidenav.vue'
 import { db } from "@/firebaseconf.js";
 import vueCustomScrollbar from 'vue-custom-scrollbar'
 export default {
-  name: "statistics",
+  name: "home",
   data() {
     return {
-      curentPageName:"statistics",
+      curentPageName:"home",
       series: [40, 60],
         chartOptions: {
           labels: ['Raised', 'Goal'],
@@ -147,105 +227,6 @@ export default {
         width: calc(100% - 236px);
         height: 100%;
 
-
-.list-header{
-  width: 100%;
-  height: 66px;
-}
-    .list-container{
-      position:absolute;
-      width:100%;
-      height: calc(100% - 66px);
-      padding: 10px;
-
-      .list-container-inner{
-        border: 1px solid #d4d4d4;
-        border-radius: 3px;
-            // overflow: auto;
-    position: relative;
-    height: 100%;
-
-    .scroll-area {
-  position: relative;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-}
-      }
-    }
-
-    
-      .list-header{
-      .header-col-6{
-        width: 50%;
-        float: left;
-
-        .header-title{
-              padding: 18px 10px 10px 10px;
-          font-size: 26px;
-          color: #fe6d56;
-          font-weight: 600;
-        }
-        .header-search{
-           padding-top: 9px;
-           width: 360px;
-           float: right;
-          .search-box-container{
-                padding: 10px;
-                  width: 300px;
-                float: left;
-            position: relative;
-            .search-icon{
-              width: 24px;
-              height: 24px;
-              background-image: url('../assets/icon-search.png');
-              background-repeat: no-repeat;
-background-size: 80%;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 19px;
-    left: 22px;
-    z-index: 1;
-            }
-            .search-box{
-                  position: relative;
-    width: 100%;
-    padding: 6px;
-    border: none;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    padding-left: 40px;
-    border-radius: 4px;
-              &:focus{
-                box-shadow: 0px 0px 3px #f88744;
-    border-color: #f88744;
-    outline: none;
-              }
-            }
-          }
-          .filter-container{
-float: left;
-    padding: 10px 0;
-    width: 10%;
-.btn-filter{
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border:none;
-  margin-top:4px;
-  margin-left: 4px;
-  background-image:url('../assets/filter-search-filter.svg');
-  background-repeat: no-repeat;
-  cursor: pointer;
-  outline:none;
-}
-          }
-        }
-
-
-        
-      }
-    }
 
 .section-100{
   width: 100%;
