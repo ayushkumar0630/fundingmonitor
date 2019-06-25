@@ -4,87 +4,64 @@
         <side-nav :currentPage="curentPageName"></side-nav>
        </div> <div class=" dash-container">
 
-         <div class="section-1">
-
-            <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="number-label">Goal</div>
-              <div class="number">1,000,000</div>
-            </div>
-            <div class="col-md-4">
-              <div class="pie-chart"><apexchart type=pie width=360 height=100% :options="chartOptions" :series="series" /></div>
-            </div>
-            <div class="col-md-4">
-              
-              <div class="number-label">Raised</div>
-              <div class="number">500,000</div>
-            </div>
-          </div>
-            </div>
-         </div>
-         <div class="section-2">
-           <div class="row-3">
-  <div class="section-title">Follow Up Needed</div>
-  <div class="section-content">
+<div class="s-row section-100">
+  <div class="section-header">   
+    <div class="section-title">Statistics</div>
+  </div>
+  <div class="col-100">
+    <div class="col-container"></div>
+  </div>
+</div>
+<div class="s-row section-50 clearfix">
+  <div class="section-header">    
+    <div class="section-title">Statistics</div>
+  </div>
+  <div class="col-50">
     
-            <div class="container-fluid">
-     <div class="row">
-            <div class="col-md-6">
-              <div class="box graph-box pull-left">
-                <apexchart type=bar width=100% :options="chartOptions" :series="seriesBar" /></div>
-                <div class="box desc-box pull-left">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-              </div>
-              </div>
-             <div class="col-md-6">
-              <div class="box graph-box pull-left">
-                <div class="img">
-                  <img src="../assets/globe.png" alt="">
-                </div>
-                </div>
-                <div class="box desc-box pull-left">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-              </div>
-              </div>
-          </div>
-          </div>
+    <div class="col-50-container">
+    <div class="col-container clearfix">
+      
+      <div class="bar-chart-col">
+        <div class="bar-chart">
+           <apexchart type=bar width=100% height=100% :options="chartOptions" :series="seriesBar" />
+        </div>
+      </div>
+      <div class="bar-desc-col">
+        <div class="bar-desc">
+           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+             
+        </div>
+      </div>
+      </div>
+      </div>
+  </div>
+  <div class="col-50">
+    
+    <div class="col-50-container">
+    <div class="col-container clearfix">
+      </div>
+      </div>
   </div>
 </div>
-         </div>
-         <div class="section-3">
-
-           
-<div class="row-3">
-  <div class="section-title">Statistics</div>
-  <div class="section-content">
-            <div class="container-fluid">
-     <div class="row">
-            <div class="col-md-6">
-              <div class="box graph-box pull-left">
-                <apexchart type=bar width=100% :options="chartOptions" :series="seriesBar" /></div>
-                <div class="box desc-box pull-left">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-              </div>
-              </div>
-             <div class="col-md-6">
-              <div class="box graph-box pull-left">
-                <div class="img">
-                  <img src="../assets/globe.png" alt="">
-                </div>
-                </div>
-                <div class="box desc-box pull-left">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-              </div>
-              </div>
-          </div>
-          </div>
+<div class="s-row section-50 clearfix">
+  <div class="section-header">
+    <div class="section-title">Statistics</div>
+  </div>
+  <div class="col-50">
+    
+    <div class="col-50-container">
+    <div class="col-container clearfix">
+      </div>
+      </div>
+  </div>
+  <div class="col-50">
+    
+    <div class="col-50-container">
+    <div class="col-container clearfix">
+      </div>
+      </div>
   </div>
 </div>
-         </div>
-         
-          
-
          </div>
   </div>
 </template>
@@ -156,6 +133,128 @@ export default {
         width: calc(100% - 236px);
         height: 100%;
 
+
+.section-100{
+  width: 100%;
+  height: 33.33%;
+  .section-header{
+    height: 30px;
+    .section-title{
+          padding-left: 7px;
+    font-size: 17px;
+    color: #fe6d56;
+    font-weight: 500;
+    line-height: 34px;
+    }
+  }
+  .col-100{
+    padding: 6px;
+    padding-bottom: 0px;
+    height: calc(100% - 30px);
+    .col-container{
+    height: 100%;
+border:1px solid #dbdbdb;    
+        border-radius: 4px;
+    }
+    }
+}
+
+.section-50{
+  
+  width: 100%;
+  height: 33.33%;
+
+  .section-header{
+    height: 30px;
+    .section-title{
+          padding-left: 7px;
+    font-size: 17px;
+    color: #fe6d56;
+    font-weight: 500;
+    line-height: 34px;
+    }
+  }
+  .col-50{
+    width: 50%;
+    height: calc(100% - 30px);
+    float: left;
+    .col-50-container{
+      padding: 6px;
+      padding-bottom: 0px;
+    height: 100%; 
+      .col-container{
+        height: 100%;
+        border:1px solid #dbdbdb;    
+        border-radius: 4px;
+
+    }
+    }
+    
+  }
+
+  .col-50:first-child{
+    .col-50-container{
+      padding-right: 3px;
+    }
+  }
+   .col-50:last-child{
+    .col-50-container{
+      padding-left: 3px;
+    }
+  }
+}
+
+.s-row:last-child{
+  
+  &.section-50{
+
+       .col-50-container{
+         padding-bottom: 6px;
+       }
+
+    }
+}
+
+
+.bar-chart-col{ width: 50%;
+    height: 100%; float: left;
+    .bar-chart{
+      padding:10px;
+      height: 100%;
+    }}
+.bar-desc-col{ width: 50%;
+    height: 100%; float: left;
+.bar-desc{
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 0px;
+  height: 100%;
+  p{
+    font-size: 14px;
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         .section-1,.section-2,.section-3{
           position:relative;height: 33.33%;
         }
@@ -181,6 +280,14 @@ export default {
     margin: 0 auto;
     height: 260px;
     }
+  }
+
+.section-wrapper{
+      height: 100%;
+    padding: 10px 0;
+}
+  .container-fluid{
+    height: 100%;
   }
 
 
@@ -228,11 +335,16 @@ export default {
             width: 50%;
             float: left;
 
+            &.desc-box{
+              font-size: 14px;
+            }
+
+.box-container{ padding: 0 10px;}
             .img{
               text-align: center;
               img{
                 width: 100%;
-                max-width: 200px;
+                max-width: 148px;
               }
             }
           }
