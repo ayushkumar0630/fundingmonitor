@@ -24,7 +24,7 @@
             <div class="footer-nav">
               <div class="footer-nav-list">
                 <ul class="navs">
-                  <li class="clearfix"><span class="icon"><img src="../assets/home-icon.png" alt=""></span><span class="nav-label">Home</span></li>
+                  <li class="clearfix"><router-link to="/home"><span class="icon"><img src="../assets/home-icon.png" alt=""></span><span class="nav-label">Home</span></router-link></li>
                   <li class="clearfix"><span class="icon"><img src="../assets/settings-icon.png" alt=""></span><span class="nav-label">Settings</span></li>
                 </ul>
               </div>
@@ -190,6 +190,8 @@ props:{
        display: block;
        float: left;
        line-height: 30px;
+       color: #ffffff !important;
+       text-decoration: none;
      }
      }}}}
 
